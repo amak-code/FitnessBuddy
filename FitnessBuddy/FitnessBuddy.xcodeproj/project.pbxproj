@@ -56,7 +56,7 @@
 				5404D5F8289B34040023B4AA /* ViewModels */,
 				5404D5F7289B33FF0023B4AA /* Views */,
 				5404D5F6289B33FA0023B4AA /* Models */,
-				5404D5F5289B33E90023B4AA /* Recources */,
+				5404D5F5289B33E90023B4AA /* Resources */,
 			);
 			path = FitnessBuddy;
 			sourceTree = "<group>";
@@ -69,13 +69,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5404D5F5289B33E90023B4AA /* Recources */ = {
+		5404D5F5289B33E90023B4AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				5404D5ED289B33B30023B4AA /* Preview Content */,
 				5404D5EB289B33B30023B4AA /* Assets.xcassets */,
 			);
-			path = Recources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		5404D5F6289B33FA0023B4AA /* Models */ = {
