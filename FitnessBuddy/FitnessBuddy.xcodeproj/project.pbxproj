@@ -19,7 +19,7 @@
 		54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B40289B8B3F00A7FFBE /* MenuView.swift */; };
 		54677B43289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */; };
 		54677B48289C375500A7FFBE /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B47289C375500A7FFBE /* SignupView.swift */; };
-		54677B4B289C4C1D00A7FFBE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4A289C4C1D00A7FFBE /* Button.swift */; };
+		54677B4B289C4C1D00A7FFBE /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4A289C4C1D00A7FFBE /* ButtonLabel.swift */; };
 		54677B4D289C505300A7FFBE /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4C289C505300A7FFBE /* FormField.swift */; };
 		54677B4F289C50B000A7FFBE /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4E289C50B000A7FFBE /* SigninView.swift */; };
 		54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B50289C525600A7FFBE /* ForgotPasswordView.swift */; };
@@ -45,7 +45,7 @@
 		54677B40289B8B3F00A7FFBE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		54677B47289C375500A7FFBE /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
-		54677B4A289C4C1D00A7FFBE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		54677B4A289C4C1D00A7FFBE /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		54677B4C289C505300A7FFBE /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		54677B4E289C50B000A7FFBE /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		54677B50289C525600A7FFBE /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 		54677B49289C375900A7FFBE /* HelperViews */ = {
 			isa = PBXGroup;
 			children = (
-				54677B4A289C4C1D00A7FFBE /* Button.swift */,
+				54677B4A289C4C1D00A7FFBE /* ButtonLabel.swift */,
 				54677B4C289C505300A7FFBE /* FormField.swift */,
 			);
 			path = HelperViews;
@@ -276,7 +276,7 @@
 				E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */,
 				54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
-				54677B4B289C4C1D00A7FFBE /* Button.swift in Sources */,
+				54677B4B289C4C1D00A7FFBE /* ButtonLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

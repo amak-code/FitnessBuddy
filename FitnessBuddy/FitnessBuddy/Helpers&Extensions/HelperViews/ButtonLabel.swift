@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Button: View {
+struct ButtonLabel: View {
     
     var text: String
     var colorName: String

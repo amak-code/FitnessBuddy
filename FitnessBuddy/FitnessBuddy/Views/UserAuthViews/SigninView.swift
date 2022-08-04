@@ -31,9 +31,15 @@ struct SigninView: View {
                 .padding(.horizontal, 30)
                 
                 Spacer()
-                Button(text: "Sign In", colorName: "AccentLight", textColor: "LightText")
+                Button {
+                    // TODO: Call sign in function
+                } label: {
+                    ButtonLabel(text: "Sign In", colorName: "AccentLight", textColor: "LightText")
+                }
+                
                 Text("--   Or   --")
-                Button(text: "Create an Account", colorName: "LightBackground", textColor: "AccentDark")
+                //TODO: This button should just lead user to signup view
+                ButtonLabel(text: "Create an Account", colorName: "LightBackground", textColor: "AccentDark")
                 Spacer()
             }
             .padding(.top, 60)

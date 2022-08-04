@@ -22,8 +22,8 @@ struct FitnessBuddyApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            // TODO: Check if user is signed in or not. If not - show sign in/signup screen
-            MenuView()
+            // TODO: Check if user is signed in or not. If not - show sign in/signup screen, if yes - show MenuView
+            SignupView()
         }
     }
 }

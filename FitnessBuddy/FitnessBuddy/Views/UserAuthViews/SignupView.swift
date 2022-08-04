@@ -23,9 +23,15 @@ struct SignupView: View {
                 
                 FormField(label: "Password", placeholder: "Create a password", input: passwordText)
                 Spacer()
-                Button(text: "Sign Up", colorName: "AccentLight", textColor: "LightText")
+                Button {
+                    // TODO: Call sign up function
+                } label: {
+                    ButtonLabel(text: "Sign Up", colorName: "AccentLight", textColor: "LightText")
+                }
+                
                 Text("--   Or   --")
-                Button(text: "Sign In Here", colorName: "LightBackground", textColor: "AccentDark")
+                //TODO: This button should just lead user to signin view
+                ButtonLabel(text: "Sign In Here", colorName: "LightBackground", textColor: "AccentDark")
                 Spacer()
             }
             .padding(.top, 40)

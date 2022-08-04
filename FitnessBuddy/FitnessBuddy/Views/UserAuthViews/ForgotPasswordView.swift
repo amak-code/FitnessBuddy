@@ -16,7 +16,7 @@ struct ForgotPasswordView: View {
             VStack(alignment: .center, spacing: 50) {
                 FormField(label: "E-mail", placeholder: "Enter your e-mail", input: emailText)
                 
-                Button(text: "Send", colorName: "AccentDark", textColor: "LightText")
+                ButtonLabel(text: "Send", colorName: "AccentDark", textColor: "LightText")
                 Spacer()
             }
             .padding(.top, 80)
