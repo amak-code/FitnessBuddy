@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ExerciseCategoryListView: View {
     @ObservedObject var evModel = ExerciseCategoryViewModel()
+    
+    
     var body: some View {
+        
+        
         NavigationView {
             VStack{
                 List {
@@ -23,7 +27,7 @@ struct ExerciseCategoryListView: View {
                 
             }
             .onAppear{
-                evModel.getExercises()
+                evModel.getAllExercises()
             }
             .navigationTitle("By Body Parts")
         }
@@ -42,21 +46,26 @@ class ExerciseCategoryViewModel: ObservableObject {
     @Published var exercises: [Exercise] = []
     @Published var categoryExercises: [String : [Exercise] ] = [:]
     @Published var categories: [String] = []
-    func getExercises() {
-        for bpart in bodyParts.allCases {
-            ExerciseDBController.fetchExercises(by: bpart) { result in
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success(let exercises):
-                        self.exercises = exercises
-                        self.categoryExercises[bpart.rawValue] = self.exercises
-                        self.categories.append(bpart.rawValue)
-                    case .failure(let error):
-                        print("There was an error with call to fetchExercises(): \(error.localizedDescription) -> \(error)")
-                    }
+    func getAllExercises() {
+        
+        ExerciseDBController.fetchExercises() { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let exercises):
+                    self.exercises = exercises
+                case .failure(let error):
+                    print("There was an error with call to fetchExercises(): \(error.localizedDescription) -> \(error)")
                 }
             }
         }
+        for bpart in bodyParts.allCases {
+            
+            //let filtered = self.exercises.filter{ exercise in
+            //    return exercise["bodyPart"] == bpart.rawValue }
+            self.categories.append(bpart.rawValue)
+            //self.categoryExercises[bpart.rawValue] = filtered
+        }
     }
+    
     
 }
