@@ -114,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				2ABFF920289B3E7E00E43BC0 /* Exercise */,
+
 				5404D5E9289B33B10023B4AA /* ContentView.swift */,
 			);
 			path = Views;
@@ -211,6 +212,9 @@
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
 				2ABFF928289B3F9100E43BC0 /* ExerciseDBController.swift in Sources */,
 				2ABFF92A289B3FBA00E43BC0 /* Exercise.swift in Sources */,
+				5404D5EA289B33B10023B4AA /* ContentView.swift in Sources */,
+				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +271,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -321,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -339,7 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitnessBuddy/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = QAY6XTDMYU;
+				DEVELOPMENT_TEAM = WA62BJ74N5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -368,7 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitnessBuddy/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = QAY6XTDMYU;
+				DEVELOPMENT_TEAM = WA62BJ74N5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
