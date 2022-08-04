@@ -14,19 +14,22 @@
 		2ABFF92C289B401600E43BC0 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFF92B289B401600E43BC0 /* ExerciseListView.swift */; };
 		2ABFF92E289B403500E43BC0 /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFF92D289B403500E43BC0 /* ExerciseDetailView.swift */; };
 		5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5404D5E7289B33B10023B4AA /* FitnessBuddyApp.swift */; };
-		5404D5EA289B33B10023B4AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5404D5E9289B33B10023B4AA /* ContentView.swift */; };
 		5404D5EC289B33B30023B4AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5404D5EB289B33B30023B4AA /* Assets.xcassets */; };
 		5404D5EF289B33B30023B4AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5404D5EE289B33B30023B4AA /* Preview Assets.xcassets */; };
 
 		54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B40289B8B3F00A7FFBE /* MenuView.swift */; };
 		54677B43289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */; };
+		54677B48289C375500A7FFBE /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B47289C375500A7FFBE /* SignupView.swift */; };
+		54677B4B289C4C1D00A7FFBE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4A289C4C1D00A7FFBE /* Button.swift */; };
+		54677B4D289C505300A7FFBE /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4C289C505300A7FFBE /* FormField.swift */; };
+		54677B4F289C50B000A7FFBE /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4E289C50B000A7FFBE /* SigninView.swift */; };
+		54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B50289C525600A7FFBE /* ForgotPasswordView.swift */; };
 		8C8FD60D289C317000C889A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */; };
 		8C8FD610289C33A700C889A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD60F289C33A700C889A7 /* FirebaseAnalytics */; };
 		8C8FD612289C33A700C889A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD611289C33A700C889A7 /* FirebaseAuth */; };
 		8C8FD614289C33A700C889A7 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD613289C33A700C889A7 /* FirebaseCrashlytics */; };
 		8C8FD616289C33A700C889A7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD615289C33A700C889A7 /* FirebaseDatabase */; };
 		8C8FD618289C33A700C889A7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD617289C33A700C889A7 /* FirebaseFirestore */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +41,17 @@
 		2ABFF92D289B403500E43BC0 /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
 		5404D5E4289B33B10023B4AA /* FitnessBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5404D5E7289B33B10023B4AA /* FitnessBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessBuddyApp.swift; sourceTree = "<group>"; };
-		5404D5E9289B33B10023B4AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5404D5EB289B33B30023B4AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5404D5EE289B33B30023B4AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 
 		54677B40289B8B3F00A7FFBE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		54677B47289C375500A7FFBE /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		54677B4A289C4C1D00A7FFBE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		54677B4C289C505300A7FFBE /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		54677B4E289C50B000A7FFBE /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		54677B50289C525600A7FFBE /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,10 +144,8 @@
 		5404D5F7289B33FF0023B4AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-
+				54677B44289C2D2400A7FFBE /* UserAuthViews */,
 				2ABFF920289B3E7E00E43BC0 /* Exercise */,
-
-				5404D5E9289B33B10023B4AA /* ContentView.swift */,
 				54677B40289B8B3F00A7FFBE /* MenuView.swift */,
 			);
 			path = Views;
@@ -157,8 +161,28 @@
 		5404D5F9289B34100023B4AA /* Helpers&Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				54677B49289C375900A7FFBE /* HelperViews */,
 			);
 			path = "Helpers&Extensions";
+			sourceTree = "<group>";
+		};
+		54677B44289C2D2400A7FFBE /* UserAuthViews */ = {
+			isa = PBXGroup;
+			children = (
+				54677B47289C375500A7FFBE /* SignupView.swift */,
+				54677B4E289C50B000A7FFBE /* SigninView.swift */,
+				54677B50289C525600A7FFBE /* ForgotPasswordView.swift */,
+			);
+			path = UserAuthViews;
+			sourceTree = "<group>";
+		};
+		54677B49289C375900A7FFBE /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				54677B4A289C4C1D00A7FFBE /* Button.swift */,
+				54677B4C289C505300A7FFBE /* FormField.swift */,
+			);
+			path = HelperViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,16 +269,18 @@
 			files = (
 				2ABFF924289B3EDE00E43BC0 /* ExerciseCategoryListView.swift in Sources */,
 				2ABFF92E289B403500E43BC0 /* ExerciseDetailView.swift in Sources */,
+				54677B4F289C50B000A7FFBE /* SigninView.swift in Sources */,
 				2ABFF926289B3F6B00E43BC0 /* NetworkError.swift in Sources */,
 				2ABFF92C289B401600E43BC0 /* ExerciseListView.swift in Sources */,
-				5404D5EA289B33B10023B4AA /* ContentView.swift in Sources */,
+				54677B48289C375500A7FFBE /* SignupView.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
+				54677B4D289C505300A7FFBE /* FormField.swift in Sources */,
+				54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */,
 				2ABFF928289B3F9100E43BC0 /* ExerciseDBController.swift in Sources */,
 				2ABFF92A289B3FBA00E43BC0 /* Exercise.swift in Sources */,
-				5404D5EA289B33B10023B4AA /* ContentView.swift in Sources */,
 				54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
-
+				54677B4B289C4C1D00A7FFBE /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +337,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
