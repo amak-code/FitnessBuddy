@@ -17,6 +17,8 @@
 		5404D5EA289B33B10023B4AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5404D5E9289B33B10023B4AA /* ContentView.swift */; };
 		5404D5EC289B33B30023B4AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5404D5EB289B33B30023B4AA /* Assets.xcassets */; };
 		5404D5EF289B33B30023B4AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5404D5EE289B33B30023B4AA /* Preview Assets.xcassets */; };
+		54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B40289B8B3F00A7FFBE /* MenuView.swift */; };
+		54677B43289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		5404D5E9289B33B10023B4AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5404D5EB289B33B30023B4AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5404D5EE289B33B30023B4AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		54677B40289B8B3F00A7FFBE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		5404D5F5289B33E90023B4AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */,
 				5404D5ED289B33B30023B4AA /* Preview Content */,
 				5404D5EB289B33B30023B4AA /* Assets.xcassets */,
 			);
@@ -116,6 +121,7 @@
 				2ABFF920289B3E7E00E43BC0 /* Exercise */,
 
 				5404D5E9289B33B10023B4AA /* ContentView.swift */,
+				54677B40289B8B3F00A7FFBE /* MenuView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 			files = (
 				5404D5EF289B33B30023B4AA /* Preview Assets.xcassets in Resources */,
 				5404D5EC289B33B30023B4AA /* Assets.xcassets in Resources */,
+				54677B43289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +220,7 @@
 				2ABFF928289B3F9100E43BC0 /* ExerciseDBController.swift in Sources */,
 				2ABFF92A289B3FBA00E43BC0 /* Exercise.swift in Sources */,
 				5404D5EA289B33B10023B4AA /* ContentView.swift in Sources */,
+				54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
 
 			);
