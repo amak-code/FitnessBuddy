@@ -25,14 +25,13 @@
 		54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B50289C525600A7FFBE /* ForgotPasswordView.swift */; };
 		54677B53289C8D8F00A7FFBE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */; };
 		8C8FD60D289C317000C889A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */; };
-<<<<<<< Updated upstream
+
 		8C8FD610289C33A700C889A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD60F289C33A700C889A7 /* FirebaseAnalytics */; };
 		8C8FD612289C33A700C889A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD611289C33A700C889A7 /* FirebaseAuth */; };
 		8C8FD616289C33A700C889A7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD615289C33A700C889A7 /* FirebaseDatabase */; };
 		8C8FD618289C33A700C889A7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD617289C33A700C889A7 /* FirebaseFirestore */; };
 		E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D77DA8289C44250032A0AB /* SignInViewModel.swift */; };
-=======
->>>>>>> Stashed changes
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,10 +55,9 @@
 		54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		54677B54289C8E9C00A7FFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
+
 		E5D77DA8289C44250032A0AB /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-=======
->>>>>>> Stashed changes
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,13 +65,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< Updated upstream
+
 				8C8FD610289C33A700C889A7 /* FirebaseAnalytics in Frameworks */,
 				8C8FD616289C33A700C889A7 /* FirebaseDatabase in Frameworks */,
 				8C8FD618289C33A700C889A7 /* FirebaseFirestore in Frameworks */,
 				8C8FD612289C33A700C889A7 /* FirebaseAuth in Frameworks */,
-=======
->>>>>>> Stashed changes
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,14 +149,12 @@
 		5404D5F7289B33FF0023B4AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< Updated upstream
+
 				E5D77DA8289C44250032A0AB /* SignInViewModel.swift */,
 				54677B44289C2D2400A7FFBE /* UserAuthViews */,
 				2ABFF920289B3E7E00E43BC0 /* Exercise */,
-=======
-				2ABFF920289B3E7E00E43BC0 /* Exercise */,
 				5404D5E9289B33B10023B4AA /* ContentView.swift */,
->>>>>>> Stashed changes
+
 				54677B40289B8B3F00A7FFBE /* MenuView.swift */,
 				54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */,
 			);
@@ -217,13 +212,11 @@
 			);
 			name = FitnessBuddy;
 			packageProductDependencies = (
-<<<<<<< Updated upstream
+
 				8C8FD60F289C33A700C889A7 /* FirebaseAnalytics */,
 				8C8FD611289C33A700C889A7 /* FirebaseAuth */,
 				8C8FD615289C33A700C889A7 /* FirebaseDatabase */,
 				8C8FD617289C33A700C889A7 /* FirebaseFirestore */,
-=======
->>>>>>> Stashed changes
 			);
 			productName = FitnessBuddy;
 			productReference = 5404D5E4289B33B10023B4AA /* FitnessBuddy.app */;
@@ -299,10 +292,8 @@
 				E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */,
 				54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
-<<<<<<< Updated upstream
+
 				54677B4B289C4C1D00A7FFBE /* ButtonLabel.swift in Sources */,
-=======
->>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +507,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-<<<<<<< Updated upstream
 
 /* Begin XCSwiftPackageProductDependency section */
 		8C8FD60F289C33A700C889A7 /* FirebaseAnalytics */ = {
@@ -540,8 +530,7 @@
 			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
-=======
->>>>>>> Stashed changes
+
 	};
 	rootObject = 5404D5DC289B33B10023B4AA /* Project object */;
 }
