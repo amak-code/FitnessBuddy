@@ -26,7 +26,6 @@
 		8C8FD60D289C317000C889A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */; };
 		8C8FD610289C33A700C889A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD60F289C33A700C889A7 /* FirebaseAnalytics */; };
 		8C8FD612289C33A700C889A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD611289C33A700C889A7 /* FirebaseAuth */; };
-		8C8FD614289C33A700C889A7 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD613289C33A700C889A7 /* FirebaseCrashlytics */; };
 		8C8FD616289C33A700C889A7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD615289C33A700C889A7 /* FirebaseDatabase */; };
 		8C8FD618289C33A700C889A7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD617289C33A700C889A7 /* FirebaseFirestore */; };
 		E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D77DA8289C44250032A0AB /* SignInViewModel.swift */; };
@@ -59,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C8FD614289C33A700C889A7 /* FirebaseCrashlytics in Frameworks */,
 				8C8FD610289C33A700C889A7 /* FirebaseAnalytics in Frameworks */,
 				8C8FD616289C33A700C889A7 /* FirebaseDatabase in Frameworks */,
 				8C8FD618289C33A700C889A7 /* FirebaseFirestore in Frameworks */,
@@ -202,7 +200,6 @@
 			packageProductDependencies = (
 				8C8FD60F289C33A700C889A7 /* FirebaseAnalytics */,
 				8C8FD611289C33A700C889A7 /* FirebaseAuth */,
-				8C8FD613289C33A700C889A7 /* FirebaseCrashlytics */,
 				8C8FD615289C33A700C889A7 /* FirebaseDatabase */,
 				8C8FD617289C33A700C889A7 /* FirebaseFirestore */,
 			);
@@ -502,11 +499,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8C8FD60E289C33A700C889A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
-		};
-		8C8FD613289C33A700C889A7 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8C8FD60E289C33A700C889A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
 		};
 		8C8FD615289C33A700C889A7 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
