@@ -16,12 +16,8 @@
 		5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5404D5E7289B33B10023B4AA /* FitnessBuddyApp.swift */; };
 		5404D5EC289B33B30023B4AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5404D5EB289B33B30023B4AA /* Assets.xcassets */; };
 		5404D5EF289B33B30023B4AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5404D5EE289B33B30023B4AA /* Preview Assets.xcassets */; };
-
 		54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B40289B8B3F00A7FFBE /* MenuView.swift */; };
 		54677B43289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */; };
-
-		E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D77DA8289C44250032A0AB /* SignInViewModel.swift */; };
-
 		54677B48289C375500A7FFBE /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B47289C375500A7FFBE /* SignupView.swift */; };
 		54677B4B289C4C1D00A7FFBE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4A289C4C1D00A7FFBE /* Button.swift */; };
 		54677B4D289C505300A7FFBE /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4C289C505300A7FFBE /* FormField.swift */; };
@@ -33,7 +29,7 @@
 		8C8FD614289C33A700C889A7 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD613289C33A700C889A7 /* FirebaseCrashlytics */; };
 		8C8FD616289C33A700C889A7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD615289C33A700C889A7 /* FirebaseDatabase */; };
 		8C8FD618289C33A700C889A7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD617289C33A700C889A7 /* FirebaseFirestore */; };
-
+		E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D77DA8289C44250032A0AB /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,19 +43,15 @@
 		5404D5E7289B33B10023B4AA /* FitnessBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessBuddyApp.swift; sourceTree = "<group>"; };
 		5404D5EB289B33B30023B4AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5404D5EE289B33B30023B4AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-
 		54677B40289B8B3F00A7FFBE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-
-		E5D77DA8289C44250032A0AB /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-
 		54677B47289C375500A7FFBE /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		54677B4A289C4C1D00A7FFBE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		54677B4C289C505300A7FFBE /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		54677B4E289C50B000A7FFBE /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		54677B50289C525600A7FFBE /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-
+		E5D77DA8289C44250032A0AB /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +70,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		112ED4C83FEFCC80CB125CAA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		2ABFF920289B3E7E00E43BC0 /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +87,6 @@
 			children = (
 				5404D5E6289B33B10023B4AA /* FitnessBuddy */,
 				5404D5E5289B33B10023B4AA /* Products */,
-				112ED4C83FEFCC80CB125CAA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,11 +122,8 @@
 		5404D5F5289B33E90023B4AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-
 				8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */,
 				54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */,
-
-
 				5404D5ED289B33B30023B4AA /* Preview Content */,
 				5404D5EB289B33B30023B4AA /* Assets.xcassets */,
 			);
@@ -160,14 +141,9 @@
 		5404D5F7289B33FF0023B4AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-
 				E5D77DA8289C44250032A0AB /* SignInViewModel.swift */,
-			
-				5404D5E9289B33B10023B4AA /* ContentView.swift */,
-
 				54677B44289C2D2400A7FFBE /* UserAuthViews */,
 				2ABFF920289B3E7E00E43BC0 /* Exercise */,
-
 				54677B40289B8B3F00A7FFBE /* MenuView.swift */,
 			);
 			path = Views;
@@ -300,14 +276,10 @@
 				54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */,
 				2ABFF928289B3F9100E43BC0 /* ExerciseDBController.swift in Sources */,
 				2ABFF92A289B3FBA00E43BC0 /* Exercise.swift in Sources */,
-
 				E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */,
-				5404D5EA289B33B10023B4AA /* ContentView.swift in Sources */,
-
 				54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
 				54677B4B289C4C1D00A7FFBE /* Button.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
