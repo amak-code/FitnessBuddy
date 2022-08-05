@@ -16,7 +16,7 @@ struct SigninView: View {
         NavigationView {
             VStack(alignment: .center, spacing: 20) {
                 
-                FormField(label: "E-mail", placeholder: "Enter your e-mail", input: emailText)
+                FormField(label: "E-mail", placeholder: "Enter your e-mail", input: $emailText)
                 
                 VStack(alignment: .leading) {
                     Text("Password")

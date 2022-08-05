@@ -9,22 +9,25 @@ import SwiftUI
 
 struct SignupView: View {
     
-    @State private var emailText: String = ""
-    @State private var usernameText: String = ""
-    @State private var passwordText: String = ""
+    @ObservedObject var signInVM = SignInViewModel()
+    
+    @State var emailText: String
+    @State var usernameText: String
+    @State var passwordText: String
     
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 20) {
                 
-                FormField(label: "Username", placeholder: "Enter your username", input: usernameText)
+                FormField(label: "Username", placeholder: "Enter your username", input: $usernameText)
                 
-                FormField(label: "E-mail", placeholder: "Enter your e-mail", input: emailText)
+                FormField(label: "E-mail", placeholder: "Enter your e-mail", input: $emailText)
                 
-                FormField(label: "Password", placeholder: "Create a password", input: passwordText)
+                FormField(label: "Password", placeholder: "Create a password", input: $passwordText)
+                
                 Spacer()
                 Button {
-                    // TODO: Call sign up function
+                    SignInViewModel().signUpUser(email: emailText, password: passwordText, name: usernameText)
                 } label: {
                     ButtonLabel(text: "Sign Up", colorName: "AccentLight", textColor: "LightText")
                 }
@@ -37,11 +40,5 @@ struct SignupView: View {
             .padding(.top, 40)
             .navigationTitle("Sign Up")
         }
-    }
-}
-
-struct SignupView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignupView()
     }
 }
