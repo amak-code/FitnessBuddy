@@ -11,6 +11,7 @@ struct SigninView: View {
     
     @State private var emailText: String = ""
     @State private var passwordText: String = ""
+    @ObservedObject var signInViewModel: SignInViewModel
     
     var body: some View {
         NavigationView {
@@ -33,6 +34,10 @@ struct SigninView: View {
                 Spacer()
                 Button {
                     // TODO: Call sign in function
+                    guard !emailText.isEmpty, !passwordText.isEmpty else {
+                        return}
+                    signInViewModel.sighInUser(email: emailText, password: passwordText)
+                    
                 } label: {
                     ButtonLabel(text: "Sign In", colorName: "AccentLight", textColor: "LightText")
                 }
@@ -50,6 +55,6 @@ struct SigninView: View {
 
 struct SigninView_Previews: PreviewProvider {
     static var previews: some View {
-        SigninView()
+        SigninView(signInViewModel: SignInViewModel())
     }
 }

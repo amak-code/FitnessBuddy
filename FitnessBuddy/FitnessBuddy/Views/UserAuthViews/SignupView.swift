@@ -34,7 +34,18 @@ struct SignupView: View {
                 
                 Text("--   Or   --")
                 //TODO: This button should just lead user to signin view
-                ButtonLabel(text: "Sign In Here", colorName: "LightBackground", textColor: "AccentDark")
+                
+                Button(action: {
+                    
+                }){
+                    NavigationLink(destination: SigninView(signInViewModel: signInVM)){
+                        
+                        ButtonLabel(text: "Sign In Here", colorName: "LightBackground", textColor: "AccentDark")
+                    }
+                }
+                
+
+                
                 Spacer()
             }
             .padding(.top, 40)
