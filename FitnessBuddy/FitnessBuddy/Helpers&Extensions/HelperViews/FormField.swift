@@ -11,7 +11,7 @@ struct FormField: View {
     
     var label: String
     var placeholder: String
-    @State var input: String
+    @Binding var input: String
     
     var body: some View {
         VStack(alignment: .leading) {

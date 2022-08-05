@@ -14,7 +14,7 @@ struct ForgotPasswordView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 50) {
-                FormField(label: "E-mail", placeholder: "Enter your e-mail", input: emailText)
+                FormField(label: "E-mail", placeholder: "Enter your e-mail", input: $emailText)
                 
                 ButtonLabel(text: "Send", colorName: "AccentDark", textColor: "LightText")
                 Spacer()

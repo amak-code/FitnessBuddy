@@ -24,15 +24,15 @@ class SignInViewModel: ObservableObject {
     }
     }
     
-    //SIGN OUT
-    static func signUpUser(email: String, password: String, name: String, onSuccess: @escaping() -> Void, onError: @escaping (_ error: Error?) -> Void) {
+    //SIGN UP
+    func signUpUser(email: String, password: String, name: String) {
         let auth = Auth.auth()
         auth.createUser(withEmail: email, password: password) {(authResult, error) in
             if error != nil {
-                onError(error)
+                print(error ?? "There was an error")
                 return
             }
-            uploadNewUserToDatabase(email: email, name: name, onSuccess: onSuccess)
+            self.uploadNewUserToDatabase(email: email, name: name)
         }
     }
     
@@ -53,12 +53,11 @@ class SignInViewModel: ObservableObject {
 
     
     //UPLOAD USER TO THE DATABASE
-    static func uploadNewUserToDatabase(email: String, name: String, onSuccess: @escaping() -> Void) {
+    func uploadNewUserToDatabase(email: String, name: String) {
         let rootref = Database.database().reference()
         let ref = rootref.child("users")
         let uid = Auth.auth().currentUser?.uid
         ref.child(uid!).setValue(["email":email, "name":name, "entries": ""])
-        onSuccess()
     }
     
 
