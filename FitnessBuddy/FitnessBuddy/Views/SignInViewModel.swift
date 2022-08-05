@@ -12,16 +12,31 @@ import FirebaseDatabase
 
 class SignInViewModel: ObservableObject {
     
+    @Published var signedIn = false
+    
+    var isSignedIn: Bool {
+        let auth = Auth.auth()
+        return auth.currentUser != nil
+    }
     //SIGN IN
-    static func sighInUser(email: String, password: String, onSuccess: @escaping() -> Void, onError: @escaping (_ error: Error?) -> Void) {
+    func sighInUser(email: String, password: String) {
         let defaults = UserDefaults.standard
         let auth = Auth.auth()
         auth.signIn(withEmail: email, password: password) {(authResult, error) in
-            if error != nil {
-                onError(error)
+          guard authResult != nil, error == nil else{
+               
                 return
             }
-    }
+            DispatchQueue.main.async {
+                self.signedIn = true
+            }
+            
+            //test for sign in
+            if auth.currentUser != nil {
+                
+                print("SIGNED IN!!!!")
+            }
+        }
     }
     
     //SIGN UP
@@ -33,24 +48,36 @@ class SignInViewModel: ObservableObject {
                 return
             }
             self.uploadNewUserToDatabase(email: email, name: name)
+            
+            DispatchQueue.main.async {
+                self.signedIn = true
+            }
         }
     }
     
     
     //FORGOT PASSWORD
-    static func forgotPassword(email: String, onSuccess: @escaping() -> Void, onError: @escaping (_ error: Error?) -> Void) {
+    func forgotPassword(email: String) {
         let auth = Auth.auth()
         auth.sendPasswordReset(withEmail: email) { (error) in
             if let error = error {
-                let alert = createAlertController(title: "Error", message: error.localizedDescription)
+                let alert = self.createAlertController(title: "Error", message: error.localizedDescription)
                 alert.present(alert, animated: true, completion: nil)
                 return
             }
-            let alert = createAlertController(title: "Hurray", message: "A password reset email has been sent!")
+            let alert = self.createAlertController(title: "Hurray", message: "A password reset email has been sent!")
             alert.present(alert, animated: true, completion: nil)
         }
     }
 
+    
+    func signOut(){
+        let auth = Auth.auth()
+        try? auth.signOut()
+        
+        self.signedIn = false
+        
+    }
     
     //UPLOAD USER TO THE DATABASE
     func uploadNewUserToDatabase(email: String, name: String) {
@@ -62,7 +89,7 @@ class SignInViewModel: ObservableObject {
     
 
     //ALERT CONTROLLER
-    static func createAlertController(title:  String, message: String) -> UIAlertController {
+    func createAlertController(title:  String, message: String) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
             alert.dismiss(animated: true, completion: nil)
