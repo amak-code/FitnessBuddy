@@ -16,7 +16,6 @@ struct SignupView: View {
     @State var passwordText: String
     
     var body: some View {
-        NavigationView {
             VStack(alignment: .center, spacing: 20) {
                 
                 FormField(label: "Username", placeholder: "Enter your username", input: $usernameText)
@@ -33,23 +32,17 @@ struct SignupView: View {
                 }
                 
                 Text("--   Or   --")
-                //TODO: This button should just lead user to signin view
                 
-                Button(action: {
-                    
-                }){
-                    NavigationLink(destination: SigninView(signInViewModel: signInVM)){
-                        
-                        ButtonLabel(text: "Sign In Here", colorName: "LightBackground", textColor: "AccentDark")
-                    }
+                NavigationLink {
+                    SigninView(signInViewModel: signInVM)
+                } label: {
+                    ButtonLabel(text: "Sign In Here", colorName: "LightBackground", textColor: "AccentDark")
                 }
-                
-
                 
                 Spacer()
             }
             .padding(.top, 40)
             .navigationTitle("Sign Up")
+            .navigationBarBackButtonHidden(true)
         }
-    }
 }

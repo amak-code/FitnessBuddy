@@ -17,7 +17,7 @@ struct SplashScreenView: View {
             SignupView(emailText: "", usernameText: "", passwordText: "")
         } else {
             ZStack {
-                    Image("launchBackground")
+                Image("launchBackground")
                 VStack(alignment: .leading) {
                     Text("FitnessBuddy")
                         .font(Font.custom("BarlowCondensed-ExtraBoldItalic", size: 60))

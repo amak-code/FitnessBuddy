@@ -14,7 +14,6 @@ struct SigninView: View {
     @ObservedObject var signInViewModel: SignInViewModel
     
     var body: some View {
-        NavigationView {
             VStack(alignment: .center, spacing: 20) {
                 
                 FormField(label: "E-mail", placeholder: "Enter your e-mail", input: $emailText)
@@ -43,13 +42,18 @@ struct SigninView: View {
                 }
                 
                 Text("--   Or   --")
-                //TODO: This button should just lead user to signup view
-                ButtonLabel(text: "Create an Account", colorName: "LightBackground", textColor: "AccentDark")
+                
+                NavigationLink {
+                    SignupView(emailText: "", usernameText: "", passwordText: "")
+                } label: {
+                    ButtonLabel(text: "Create an Account", colorName: "LightBackground", textColor: "AccentDark")
+                }
+                
                 Spacer()
             }
             .padding(.top, 60)
             .navigationTitle("Sign In")
-        }
+            .navigationBarBackButtonHidden(true)
     }
 }
 
