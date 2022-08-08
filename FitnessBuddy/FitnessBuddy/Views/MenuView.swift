@@ -28,7 +28,7 @@ struct MenuView: View {
                     Label("Health", systemImage: "bolt.heart.fill")
                 }
                 .tag(2)
-            Text("There will be a list of workouts")
+            WorkoutListView(listViewModel: WorkoutListViewModel())
                 .tabItem {
                     Label("My Workouts", systemImage: "figure.walk.circle.fill")
                 }
