@@ -14,7 +14,7 @@ struct ExerciseDetailView: View {
             Text(exercise.name)
             Text(exercise.bodyPart)
             Text(exercise.equipment)
-            GifImage(exercise.gifUrl)
+            Text(exercise.gifUrl)
             
             Text(exercise.id)
             Text(exercise.target)
@@ -24,6 +24,6 @@ struct ExerciseDetailView: View {
 
 struct ExerciseDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseDetailView(exercise: Exercise(bodyPart: "bodypart: legs", equipment: "squat rack", gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0001.gif", id: "id placement", name: "deadlift", target: "target muscle: "))
+        ExerciseDetailView(exercise: Exercise(bodyPart: "bodypart: legs", equipment: "squat rack", gifUrl: "gif placement", id: "id placement", name: "deadlift", target: "target muscle: "))
     }
 }
