@@ -30,6 +30,6 @@ struct ExerciseListView: View {
 
 struct ExerciseListView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseListView(exercises: [Exercise(bodyPart: "bodypart: legs", equipment: "squat rack", gifUrl: "gif placement", id: "id placement", name: "deadlift", target: "target muscle: ")])
+        ExerciseListView(exercises: [Exercise(bodyPart: "bodypart: legs", equipment: "squat rack", gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0001.gif", id: "id placement", name: "deadlift", target: "target muscle: ")])
     }
 }
