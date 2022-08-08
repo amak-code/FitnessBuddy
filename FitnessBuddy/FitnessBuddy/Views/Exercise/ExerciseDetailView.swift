@@ -14,8 +14,7 @@ struct ExerciseDetailView: View {
             Text(exercise.name)
             Text(exercise.bodyPart)
             Text(exercise.equipment)
-            Text(exercise.gifUrl)
-            
+            GifImage(exercise.gifUrl)
             Text(exercise.id)
             Text(exercise.target)
         }
