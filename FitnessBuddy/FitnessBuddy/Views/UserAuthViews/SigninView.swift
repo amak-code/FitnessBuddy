@@ -37,15 +37,8 @@ struct SigninView: View {
                     guard !emailText.isEmpty, !passwordText.isEmpty else {
                         return}
                     signInViewModel.sighInUser(email: emailText, password: passwordText)
-                    print(signInViewModel.signedIn)
-                    if signInViewModel.signedIn {
-                        loggedIn = true
-                    }
                 } label: {
                     ButtonLabel(text: "Sign In", colorName: "AccentLight", textColor: "LightText")
-                }
-                if loggedIn {
-                    MenuView()
                 }
                 
                 Text("--   Or   --")

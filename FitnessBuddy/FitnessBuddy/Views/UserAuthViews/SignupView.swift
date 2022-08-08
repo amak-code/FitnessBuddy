@@ -14,7 +14,6 @@ struct SignupView: View {
     @State var emailText: String
     @State var usernameText: String
     @State var passwordText: String
-    @State private var loggedIn = false
     
     var body: some View {
             VStack(alignment: .center, spacing: 20) {
@@ -28,9 +27,6 @@ struct SignupView: View {
                 Spacer()
                 Button {
                     SignInViewModel().signUpUser(email: emailText, password: passwordText, name: usernameText)
-                    if signInVM.signedIn {
-                        loggedIn = true
-                    }
                 } label: {
                     ButtonLabel(text: "Sign Up", colorName: "AccentLight", textColor: "LightText")
                 }
@@ -42,10 +38,6 @@ struct SignupView: View {
                 } label: {
                     ButtonLabel(text: "Sign In Here", colorName: "LightBackground", textColor: "AccentDark")
                 }
-                if loggedIn {
-                    MenuView()
-                }
-                
                 Spacer()
             }
             .padding(.top, 40)
