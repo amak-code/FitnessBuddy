@@ -26,6 +26,12 @@
 		54677B4F289C50B000A7FFBE /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4E289C50B000A7FFBE /* SigninView.swift */; };
 		54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B50289C525600A7FFBE /* ForgotPasswordView.swift */; };
 		54677B53289C8D8F00A7FFBE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */; };
+		54CC65AF28A19EF000AA07CB /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65AB28A19EEF00AA07CB /* WorkoutListView.swift */; };
+		54CC65B028A19EF000AA07CB /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65AC28A19EEF00AA07CB /* WorkoutDetailView.swift */; };
+		54CC65B128A19EF000AA07CB /* NoEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65AD28A19EF000AA07CB /* NoEntryView.swift */; };
+		54CC65B228A19EF000AA07CB /* AddWorkoutSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65AE28A19EF000AA07CB /* AddWorkoutSplitView.swift */; };
+		54CC65B428A19EF900AA07CB /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65B328A19EF900AA07CB /* WorkoutList.swift */; };
+		54CC65B628A19F0700AA07CB /* WorkoutListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65B528A19F0700AA07CB /* WorkoutListViewModel.swift */; };
 		54EE93E0289E1292005AA463 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE93DF289E1292005AA463 /* ProfileView.swift */; };
 		54EE93E2289E12B7005AA463 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE93E1289E12B7005AA463 /* HealthView.swift */; };
 		8C8FD60D289C317000C889A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */; };
@@ -59,6 +65,12 @@
 		54677B50289C525600A7FFBE /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		54677B54289C8E9C00A7FFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		54CC65AB28A19EEF00AA07CB /* WorkoutListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
+		54CC65AC28A19EEF00AA07CB /* WorkoutDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
+		54CC65AD28A19EF000AA07CB /* NoEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoEntryView.swift; sourceTree = "<group>"; };
+		54CC65AE28A19EF000AA07CB /* AddWorkoutSplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkoutSplitView.swift; sourceTree = "<group>"; };
+		54CC65B328A19EF900AA07CB /* WorkoutList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
+		54CC65B528A19F0700AA07CB /* WorkoutListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListViewModel.swift; sourceTree = "<group>"; };
 		54EE93DF289E1292005AA463 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		54EE93E1289E12B7005AA463 /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
 		8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -147,6 +159,7 @@
 		5404D5F6289B33FA0023B4AA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				54CC65B328A19EF900AA07CB /* WorkoutList.swift */,
 				2ABFF929289B3FBA00E43BC0 /* Exercise.swift */,
 			);
 			path = Models;
@@ -155,6 +168,7 @@
 		5404D5F7289B33FF0023B4AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				54CC65AA28A19EDC00AA07CB /* WorkoutList */,
 				2ABFF920289B3E7E00E43BC0 /* Exercise */,
 				54677B44289C2D2400A7FFBE /* UserAuthViews */,
 				E5D77DA8289C44250032A0AB /* SignInViewModel.swift */,
@@ -169,6 +183,7 @@
 		5404D5F8289B34040023B4AA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				54CC65B528A19F0700AA07CB /* WorkoutListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -215,6 +230,17 @@
 				54677B4C289C505300A7FFBE /* FormField.swift */,
 			);
 			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		54CC65AA28A19EDC00AA07CB /* WorkoutList */ = {
+			isa = PBXGroup;
+			children = (
+				54CC65AE28A19EF000AA07CB /* AddWorkoutSplitView.swift */,
+				54CC65AD28A19EF000AA07CB /* NoEntryView.swift */,
+				54CC65AC28A19EEF00AA07CB /* WorkoutDetailView.swift */,
+				54CC65AB28A19EEF00AA07CB /* WorkoutListView.swift */,
+			);
+			path = WorkoutList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,19 +325,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ABFF924289B3EDE00E43BC0 /* ExerciseCategoryListView.swift in Sources */,
+				54CC65B028A19EF000AA07CB /* WorkoutDetailView.swift in Sources */,
 				2ABFF92E289B403500E43BC0 /* ExerciseDetailView.swift in Sources */,
+				54CC65B428A19EF900AA07CB /* WorkoutList.swift in Sources */,
+				54CC65AF28A19EF000AA07CB /* WorkoutListView.swift in Sources */,
 				54677B4F289C50B000A7FFBE /* SigninView.swift in Sources */,
 				2ABFF926289B3F6B00E43BC0 /* NetworkError.swift in Sources */,
 				2ABFF92C289B401600E43BC0 /* ExerciseListView.swift in Sources */,
 				54677B48289C375500A7FFBE /* SignupView.swift in Sources */,
 				54EE93E2289E12B7005AA463 /* HealthView.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
+				54CC65B228A19EF000AA07CB /* AddWorkoutSplitView.swift in Sources */,
 				54677B53289C8D8F00A7FFBE /* SplashScreenView.swift in Sources */,
 				54677B4D289C505300A7FFBE /* FormField.swift in Sources */,
 				542A69EB28A0DA4F0017DDD8 /* HealthManager.swift in Sources */,
 				54EE93E0289E1292005AA463 /* ProfileView.swift in Sources */,
 				54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */,
 				2ABFF928289B3F9100E43BC0 /* ExerciseDBController.swift in Sources */,
+				54CC65B628A19F0700AA07CB /* WorkoutListViewModel.swift in Sources */,
+				54CC65B128A19EF000AA07CB /* NoEntryView.swift in Sources */,
 				2ABFF92A289B3FBA00E43BC0 /* Exercise.swift in Sources */,
 				E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */,
 				54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */,
