@@ -16,6 +16,8 @@
 		5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5404D5E7289B33B10023B4AA /* FitnessBuddyApp.swift */; };
 		5404D5EC289B33B30023B4AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5404D5EB289B33B30023B4AA /* Assets.xcassets */; };
 		5404D5EF289B33B30023B4AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5404D5EE289B33B30023B4AA /* Preview Assets.xcassets */; };
+		542A69E828A0BB4E0017DDD8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542A69E728A0BB4E0017DDD8 /* HealthKit.framework */; };
+		542A69EB28A0DA4F0017DDD8 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542A69EA28A0DA4F0017DDD8 /* HealthManager.swift */; };
 		54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B40289B8B3F00A7FFBE /* MenuView.swift */; };
 		54677B43289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */; };
 		54677B48289C375500A7FFBE /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B47289C375500A7FFBE /* SignupView.swift */; };
@@ -24,6 +26,8 @@
 		54677B4F289C50B000A7FFBE /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B4E289C50B000A7FFBE /* SigninView.swift */; };
 		54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B50289C525600A7FFBE /* ForgotPasswordView.swift */; };
 		54677B53289C8D8F00A7FFBE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */; };
+		54EE93E0289E1292005AA463 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE93DF289E1292005AA463 /* ProfileView.swift */; };
+		54EE93E2289E12B7005AA463 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE93E1289E12B7005AA463 /* HealthView.swift */; };
 		8C8FD60D289C317000C889A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */; };
 		8C8FD610289C33A700C889A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD60F289C33A700C889A7 /* FirebaseAnalytics */; };
 		8C8FD612289C33A700C889A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD611289C33A700C889A7 /* FirebaseAuth */; };
@@ -43,6 +47,9 @@
 		5404D5E7289B33B10023B4AA /* FitnessBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessBuddyApp.swift; sourceTree = "<group>"; };
 		5404D5EB289B33B30023B4AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5404D5EE289B33B30023B4AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		542A69E528A0BB4E0017DDD8 /* FitnessBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitnessBuddy.entitlements; sourceTree = "<group>"; };
+		542A69E728A0BB4E0017DDD8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		542A69EA28A0DA4F0017DDD8 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		54677B40289B8B3F00A7FFBE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		54677B42289B93AD00A7FFBE /* BarlowCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		54677B47289C375500A7FFBE /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -52,6 +59,8 @@
 		54677B50289C525600A7FFBE /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		54677B54289C8E9C00A7FFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		54EE93DF289E1292005AA463 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		54EE93E1289E12B7005AA463 /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
 		8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E5D77DA8289C44250032A0AB /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +74,7 @@
 				8C8FD616289C33A700C889A7 /* FirebaseDatabase in Frameworks */,
 				8C8FD618289C33A700C889A7 /* FirebaseFirestore in Frameworks */,
 				8C8FD612289C33A700C889A7 /* FirebaseAuth in Frameworks */,
+				542A69E828A0BB4E0017DDD8 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +98,7 @@
 			children = (
 				5404D5E6289B33B10023B4AA /* FitnessBuddy */,
 				5404D5E5289B33B10023B4AA /* Products */,
+				542A69E628A0BB4E0017DDD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +113,7 @@
 		5404D5E6289B33B10023B4AA /* FitnessBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				542A69E528A0BB4E0017DDD8 /* FitnessBuddy.entitlements */,
 				54677B54289C8E9C00A7FFBE /* Info.plist */,
 				5404D5E7289B33B10023B4AA /* FitnessBuddyApp.swift */,
 				5404D5F9289B34100023B4AA /* Helpers&Extensions */,
@@ -143,11 +155,13 @@
 		5404D5F7289B33FF0023B4AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E5D77DA8289C44250032A0AB /* SignInViewModel.swift */,
-				54677B44289C2D2400A7FFBE /* UserAuthViews */,
 				2ABFF920289B3E7E00E43BC0 /* Exercise */,
+				54677B44289C2D2400A7FFBE /* UserAuthViews */,
+				E5D77DA8289C44250032A0AB /* SignInViewModel.swift */,
 				54677B40289B8B3F00A7FFBE /* MenuView.swift */,
 				54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */,
+				54EE93DF289E1292005AA463 /* ProfileView.swift */,
+				54EE93E1289E12B7005AA463 /* HealthView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,9 +176,26 @@
 		5404D5F9289B34100023B4AA /* Helpers&Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				542A69E928A0DA390017DDD8 /* HelperFunctions */,
 				54677B49289C375900A7FFBE /* HelperViews */,
 			);
 			path = "Helpers&Extensions";
+			sourceTree = "<group>";
+		};
+		542A69E628A0BB4E0017DDD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				542A69E728A0BB4E0017DDD8 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		542A69E928A0DA390017DDD8 /* HelperFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				542A69EA28A0DA4F0017DDD8 /* HealthManager.swift */,
+			);
+			path = HelperFunctions;
 			sourceTree = "<group>";
 		};
 		54677B44289C2D2400A7FFBE /* UserAuthViews */ = {
@@ -273,9 +304,12 @@
 				2ABFF926289B3F6B00E43BC0 /* NetworkError.swift in Sources */,
 				2ABFF92C289B401600E43BC0 /* ExerciseListView.swift in Sources */,
 				54677B48289C375500A7FFBE /* SignupView.swift in Sources */,
+				54EE93E2289E12B7005AA463 /* HealthView.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
 				54677B53289C8D8F00A7FFBE /* SplashScreenView.swift in Sources */,
 				54677B4D289C505300A7FFBE /* FormField.swift in Sources */,
+				542A69EB28A0DA4F0017DDD8 /* HealthManager.swift in Sources */,
+				54EE93E0289E1292005AA463 /* ProfileView.swift in Sources */,
 				54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */,
 				2ABFF928289B3F9100E43BC0 /* ExerciseDBController.swift in Sources */,
 				2ABFF92A289B3FBA00E43BC0 /* Exercise.swift in Sources */,
@@ -408,13 +442,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FitnessBuddy/FitnessBuddy.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitnessBuddy/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = WV7H3WR573;
+				DEVELOPMENT_TEAM = QAY6XTDMYU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FitnessBuddy/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We will use your health information to show you your latest heart rate";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We will use your health information to show you your latest heart rate";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -427,6 +465,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neverwinter9.FitnessBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -438,13 +477,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FitnessBuddy/FitnessBuddy.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitnessBuddy/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = WV7H3WR573;
+				DEVELOPMENT_TEAM = QAY6XTDMYU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FitnessBuddy/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We will use your health information to show you your latest heart rate";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We will use your health information to show you your latest heart rate";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,6 +500,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neverwinter9.FitnessBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
