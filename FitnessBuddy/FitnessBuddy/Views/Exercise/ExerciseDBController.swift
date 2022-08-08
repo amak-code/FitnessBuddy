@@ -13,8 +13,9 @@ class ExerciseDBController {
     
     static func fetchExercises( completion: @escaping (Result<[Exercise], NetworkError>) -> Void ) {
         let headers = [
-            "X-RapidAPI-Key": "6b1fb347bfmshfc36be9e526e3b9p1c7b99jsn7a1de3800113",
-            "X-RapidAPI-Host": "exercisedb.p.rapidapi.com"
+            "X-RapidAPI-Key": "9bc6f26e9bmshe037eb0362bc7e3p15a733jsnaba8730c63df",
+            "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+            "Content-Type": "application/json"
         ]
         
         guard let baseURL = baseURL else {
@@ -27,7 +28,7 @@ class ExerciseDBController {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        // request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         URLSession.shared.dataTask(with: request as URLRequest) { data, _, error in
             if let error = error {
@@ -39,8 +40,9 @@ class ExerciseDBController {
             }
             do {
                 // In case you want to see the JSON. cannot just use this because JSONSerialization returns an AnyObject array.
-                //let json = try JSONSerialization.jsonObject(with: data, options: [])
-                //print(json)
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+                print("in the do of the do catch")
                 let exercises = try JSONDecoder().decode([Exercise].self, from: data)
                 return completion(.success(exercises))
                 
