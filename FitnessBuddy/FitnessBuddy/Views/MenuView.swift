@@ -18,15 +18,14 @@ struct MenuView: View {
     
     var body: some View {
         TabView(selection:$selection) {
-            Text("There will be a Home Page")
+            ExerciseCategoryListView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
                 .tag(1)
-            Text("There will be a Health Tab")
+            HealthView()
                 .tabItem {
                     Label("Health", systemImage: "bolt.heart.fill")
-//                    Label("Health", systemImage: "waveform.path.ecg.rectangle.fill")
                 }
                 .tag(2)
             Text("There will be a list of workouts")
@@ -39,7 +38,7 @@ struct MenuView: View {
                     Label("Player", systemImage: "play.fill")
                 }
                 .tag(4)
-            Text("There will be a profile tab")
+            ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")
                 }
