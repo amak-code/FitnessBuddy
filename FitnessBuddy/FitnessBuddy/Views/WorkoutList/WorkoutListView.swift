@@ -9,31 +9,43 @@ import SwiftUI
 struct WorkoutListView: View {
 
     @ObservedObject var listViewModel: WorkoutListViewModel
+    @State var showingPopup = false
 
     var body: some View {
-        ScrollView {
-            VStack {
-                if listViewModel.WorkoutLists.isEmpty {
-                    NoEntryView()
-                    .transition(AnyTransition.opacity.animation(.easeIn))
+        NavigationView {
+            ZStack {
+                if showingPopup {
+                    AddWorkoutSplitView(listViewModel: WorkoutListViewModel(), showingPopup: $showingPopup)
                 } else {
-                    List {
-                        ForEach(listViewModel.WorkoutLists) { list in ListRowView(list: list)
+            ScrollView {
+                VStack {
+                    if listViewModel.WorkoutLists.isEmpty {
+                        NoEntryView(showingPopup: $showingPopup)
+                        .transition(AnyTransition.opacity.animation(.easeIn))
+                    } else {
+                        List {
+                            ForEach(listViewModel.WorkoutLists) { list in ListRowView(list: list)
 
-                    }.onDelete(perform: listViewModel.deleteEntryFromDatebase(indexSet:))
-                         //.padding()
+                        }.onDelete(perform: listViewModel.deleteEntryFromDatebase(indexSet:))
+                             //.padding()
+                    }
+                        .frame(height: CGFloat(listViewModel.WorkoutLists.count) * 115 + 25)
+                        .listStyle(.plain)
+                    }
+                    //}
                 }
-                    .frame(height: CGFloat(listViewModel.WorkoutLists.count) * 115 + 25)
-                    .listStyle(.plain)
+                .navigationTitle("My workout splits")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    Button {
+                        showingPopup = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                        }
+                    }
                 }
-                //}
             }
-            .navigationTitle("My workout splits")
-            .edgesIgnoringSafeArea(.top)
-            .navigationBarItems(
-                trailing:
-                    NavigationLink("Add", destination: AddWorkoutSplitView( listViewModel: WorkoutListViewModel()))
-            )
         }
         .onAppear {
             listViewModel.getEntries()
@@ -55,7 +67,7 @@ struct ListRowView: View {
     @State var list: WorkoutList
     var body: some View {
         VStack {
-            NavigationLink(destination: WorkoutDetailView(listViewModel: WorkoutListViewModel(), list:list)){
+            NavigationLink(destination: ListOfExercises()){
             Text(list.title)
             }
         }
