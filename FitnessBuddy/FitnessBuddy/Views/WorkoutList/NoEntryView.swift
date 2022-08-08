@@ -9,6 +9,8 @@ import SwiftUI
 struct NoEntryView: View {
     @State var animate: Bool = false
     let AccentColor = Color("AccentColor")
+    
+    @Binding var showingPopup: Bool
 
     var body: some View {
         ScrollView {
@@ -17,7 +19,7 @@ struct NoEntryView: View {
                     .padding(.bottom, 20)
 
                 NavigationLink(
-                    destination: AddWorkoutSplitView( listViewModel: WorkoutListViewModel()),
+                    destination: AddWorkoutSplitView( listViewModel: WorkoutListViewModel(), showingPopup: $showingPopup),
                     label: {
                         Text("Add")
                             .foregroundColor(.white)
@@ -54,16 +56,6 @@ struct NoEntryView: View {
             ) {
                 animate.toggle()
             }
-        }
-    }
-
-}
-
-struct NoEntryView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            NoEntryView()
-                .navigationTitle("Title")
         }
     }
 }

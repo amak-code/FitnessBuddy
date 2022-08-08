@@ -16,11 +16,12 @@ struct AddWorkoutSplitView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var showAlert: Bool = false
     @State var alertTitle: String = ""
+    
+    @Binding var showingPopup: Bool
 
     var body: some View {
 
         ScrollView {
-
                 VStack(alignment: .leading) {
                     Text("Add new workout:")
                         .bold()
@@ -55,18 +56,11 @@ struct AddWorkoutSplitView: View {
             let timestamp = String(Int(NSDate().timeIntervalSince1970))
             WorkoutListViewModel.uploadEntryToDatabase(title: title, date: WorkoutListViewModel.dateToString(date: WorkoutDate), timestamp: timestamp)
             presentationMode.wrappedValue.dismiss()
+            showingPopup = false
         }
     }
 
     func getAlert() -> Alert {
         return Alert(title: Text(alertTitle))
-    }
-}
-
-struct AddWorkoutSplitView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            AddWorkoutSplitView(listViewModel: WorkoutListViewModel())
-        }
     }
 }
