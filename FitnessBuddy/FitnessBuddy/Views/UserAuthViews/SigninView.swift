@@ -5,43 +5,70 @@
 //  Created by Tatiana Bondarenko on 8/4/22.
 //
 
+/* User sigh in account for the test:
+ username: Em@gmail.com
+ password: 1234567
+ */
+
+
 import SwiftUI
 
 struct SigninView: View {
     
+    @State var showMainView = false
     @State private var emailText: String = ""
     @State private var passwordText: String = ""
     @ObservedObject var signInViewModel: SignInViewModel
     
     var body: some View {
+        ZStack {
+            
             VStack(alignment: .center, spacing: 20) {
                 
                 FormField(label: "E-mail", placeholder: "Enter your e-mail", input: $emailText)
+                    .disableAutocorrection(true)
+                    .autocapitalization(.none)
                 
                 VStack(alignment: .leading) {
                     Text("Password")
                     SecureField("Enter your password", text: $passwordText)
                         .padding()
                         .background(Color(UIColor.secondarySystemBackground).cornerRadius(12))
-                    Text("Forgot Password?")
-                        .padding(.top)
-                        .foregroundColor(Color("AccentDark"))
-                        
+                    
+                    //MARK: - Forgot password
+                    NavigationLink(destination: ForgotPasswordView(signInViewModel: signInViewModel)) {
+                        Text("Forgot Password?")
+                            .padding(.top)
+                            .foregroundColor(Color("AccentDark"))
+                    }
                 }
                 .padding(.horizontal, 30)
                 
                 Spacer()
-                Button {
-                    // TODO: Call sign in function
-                    guard !emailText.isEmpty, !passwordText.isEmpty else {
-                        return}
-                    signInViewModel.sighInUser(email: emailText, password: passwordText)
+                
+                
+                //MARK: - Sign in
+                
+                NavigationLink(destination: MenuView(), isActive: $showMainView){
                     
-                } label: {
-                    ButtonLabel(text: "Sign In", colorName: "AccentLight", textColor: "LightText")
+                    Button {
+                        guard !emailText.isEmpty, !passwordText.isEmpty else {
+                            return}
+                        signInViewModel.sighInUser(email: emailText, password: passwordText)
+                        emailText = ""
+                        passwordText = ""
+                        self.showMainView = true
+                        
+                        
+                    } label: {
+                        ButtonLabel(text: "Sign In", colorName: "AccentLight", textColor: "LightText")
+                    }
+                    
                 }
                 
                 Text("--   Or   --")
+                
+                //MARK: - Sign Up
                 
                 NavigationLink {
                     SignupView(emailText: "", usernameText: "", passwordText: "")
@@ -50,10 +77,25 @@ struct SigninView: View {
                 }
                 
                 Spacer()
+                
+                
+                //MARK: -  Test for Sign Out Button
+                Button {
+                    
+                    if signInViewModel.isSignedIn {
+                        signInViewModel.signOut()
+                    }
+                    
+                    
+                } label: {
+                    ButtonLabel(text: "Sign Out", colorName: "AccentLight", textColor: "LightText")
+                }
             }
             .padding(.top, 60)
             .navigationTitle("Sign In")
             .navigationBarBackButtonHidden(true)
+            
+        }//Zstack
     }
 }
 
