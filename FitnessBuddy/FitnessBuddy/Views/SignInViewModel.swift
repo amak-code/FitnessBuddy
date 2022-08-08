@@ -5,6 +5,7 @@
 //  Created by antikiller on 04.08.2022.
 //
 
+import UIKit
 import SwiftUI
 import FirebaseCore
 import FirebaseAuth
@@ -13,8 +14,10 @@ import FirebaseDatabase
 class SignInViewModel: ObservableObject {
     
     @Published var signedIn = false
+    @Published var successReset: Bool = false
+    @Published var showForgotPasswordAlert: Bool = false
     
-    var isSignedIn: Bool {
+     var isSignedIn: Bool {
         let auth = Auth.auth()
         return auth.currentUser != nil
     }
@@ -60,22 +63,32 @@ class SignInViewModel: ObservableObject {
     func forgotPassword(email: String) {
         let auth = Auth.auth()
         auth.sendPasswordReset(withEmail: email) { (error) in
-            if let error = error {
-                let alert = self.createAlertController(title: "Error", message: error.localizedDescription)
-                alert.present(alert, animated: true, completion: nil)
+            self.showForgotPasswordAlert = true
+            if  error != nil {
+                print(error ?? "There was an error while request was submitted")
                 return
             }
-            let alert = self.createAlertController(title: "Hurray", message: "A password reset email has been sent!")
-            alert.present(alert, animated: true, completion: nil)
+            
+            DispatchQueue.main.async {
+                
+                self.successReset = true
+                print("YOU WILL RECEIVE AN EMAIL TO RESET THE PASSWORD!!!")
+            }
+            
         }
     }
-
+    
     
     func signOut(){
         let auth = Auth.auth()
         try? auth.signOut()
         
         self.signedIn = false
+        
+        if auth.currentUser == nil {
+            
+            print("SIGNED OUT!!!!")
+        }
         
     }
     
@@ -89,14 +102,14 @@ class SignInViewModel: ObservableObject {
     
 
     //ALERT CONTROLLER
-    func createAlertController(title:  String, message: String) -> UIAlertController {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-            alert.dismiss(animated: true, completion: nil)
-        }
-        alert.addAction(okAction)
-        return alert
-    }
+//    func createAlertController(title:  String, message: String) -> UIAlertController {
+//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+//            alert.dismiss(animated: true, completion: nil)
+//        }
+//        alert.addAction(okAction)
+//        return alert
+//    }
     
     
    

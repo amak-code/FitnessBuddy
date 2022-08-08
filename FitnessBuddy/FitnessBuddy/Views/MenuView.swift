@@ -46,6 +46,7 @@ struct MenuView: View {
                 .tag(5)
         }
         .accentColor(Color("AccentLight"))
+        .navigationBarBackButtonHidden(true)
     }
 }
 
