@@ -12,6 +12,7 @@ struct SigninView: View {
     @State private var emailText: String = ""
     @State private var passwordText: String = ""
     @ObservedObject var signInViewModel: SignInViewModel
+    @State private var loggedIn = false
     
     var body: some View {
             VStack(alignment: .center, spacing: 20) {
@@ -36,9 +37,15 @@ struct SigninView: View {
                     guard !emailText.isEmpty, !passwordText.isEmpty else {
                         return}
                     signInViewModel.sighInUser(email: emailText, password: passwordText)
-                    
+                    print(signInViewModel.signedIn)
+                    if signInViewModel.signedIn {
+                        loggedIn = true
+                    }
                 } label: {
                     ButtonLabel(text: "Sign In", colorName: "AccentLight", textColor: "LightText")
+                }
+                if loggedIn {
+                    MenuView()
                 }
                 
                 Text("--   Or   --")

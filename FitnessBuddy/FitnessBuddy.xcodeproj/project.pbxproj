@@ -25,13 +25,17 @@
 		54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B50289C525600A7FFBE /* ForgotPasswordView.swift */; };
 		54677B53289C8D8F00A7FFBE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */; };
 		8C8FD60D289C317000C889A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */; };
-
 		8C8FD610289C33A700C889A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD60F289C33A700C889A7 /* FirebaseAnalytics */; };
 		8C8FD612289C33A700C889A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD611289C33A700C889A7 /* FirebaseAuth */; };
 		8C8FD616289C33A700C889A7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD615289C33A700C889A7 /* FirebaseDatabase */; };
 		8C8FD618289C33A700C889A7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD617289C33A700C889A7 /* FirebaseFirestore */; };
+		8C9D09AC28A07ECB00A4E925 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D09AB28A07ECB00A4E925 /* WorkoutDetailView.swift */; };
+		8CAFDB12289E08C70032BEE8 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFDB11289E08C60032BEE8 /* WorkoutListView.swift */; };
+		8CAFDB14289E0F070032BEE8 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFDB13289E0F070032BEE8 /* WorkoutList.swift */; };
+		8CAFDB16289E17920032BEE8 /* NoEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFDB15289E17920032BEE8 /* NoEntryView.swift */; };
+		8CAFDB18289E17D00032BEE8 /* AddWorkoutSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFDB17289E17D00032BEE8 /* AddWorkoutSplitView.swift */; };
+		8CAFDB1A289E275B0032BEE8 /* WorkoutListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFDB19289E275B0032BEE8 /* WorkoutListViewModel.swift */; };
 		E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D77DA8289C44250032A0AB /* SignInViewModel.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,9 +59,13 @@
 		54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		54677B54289C8E9C00A7FFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-
+		8C9D09AB28A07ECB00A4E925 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
+		8CAFDB11289E08C60032BEE8 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
+		8CAFDB13289E0F070032BEE8 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutList.swift; path = FitnessBuddy/Views/WorkoutList.swift; sourceTree = SOURCE_ROOT; };
+		8CAFDB15289E17920032BEE8 /* NoEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEntryView.swift; sourceTree = "<group>"; };
+		8CAFDB17289E17D00032BEE8 /* AddWorkoutSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutSplitView.swift; sourceTree = "<group>"; };
+		8CAFDB19289E275B0032BEE8 /* WorkoutListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewModel.swift; sourceTree = "<group>"; };
 		E5D77DA8289C44250032A0AB /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +73,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				8C8FD610289C33A700C889A7 /* FirebaseAnalytics in Frameworks */,
 				8C8FD616289C33A700C889A7 /* FirebaseDatabase in Frameworks */,
 				8C8FD618289C33A700C889A7 /* FirebaseFirestore in Frameworks */,
 				8C8FD612289C33A700C889A7 /* FirebaseAuth in Frameworks */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				2ABFF929289B3FBA00E43BC0 /* Exercise.swift */,
+				8CAFDB13289E0F070032BEE8 /* WorkoutList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,12 +156,12 @@
 		5404D5F7289B33FF0023B4AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-
-				E5D77DA8289C44250032A0AB /* SignInViewModel.swift */,
+				8CAFDB15289E17920032BEE8 /* NoEntryView.swift */,
+				8C9D09AB28A07ECB00A4E925 /* WorkoutDetailView.swift */,
+				8CAFDB11289E08C60032BEE8 /* WorkoutListView.swift */,
+				8CAFDB17289E17D00032BEE8 /* AddWorkoutSplitView.swift */,
 				54677B44289C2D2400A7FFBE /* UserAuthViews */,
 				2ABFF920289B3E7E00E43BC0 /* Exercise */,
-				5404D5E9289B33B10023B4AA /* ContentView.swift */,
-
 				54677B40289B8B3F00A7FFBE /* MenuView.swift */,
 				54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */,
 			);
@@ -164,6 +171,8 @@
 		5404D5F8289B34040023B4AA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E5D77DA8289C44250032A0AB /* SignInViewModel.swift */,
+				8CAFDB19289E275B0032BEE8 /* WorkoutListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -212,7 +221,6 @@
 			);
 			name = FitnessBuddy;
 			packageProductDependencies = (
-
 				8C8FD60F289C33A700C889A7 /* FirebaseAnalytics */,
 				8C8FD611289C33A700C889A7 /* FirebaseAuth */,
 				8C8FD615289C33A700C889A7 /* FirebaseDatabase */,
@@ -277,22 +285,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAFDB12289E08C70032BEE8 /* WorkoutListView.swift in Sources */,
 				2ABFF924289B3EDE00E43BC0 /* ExerciseCategoryListView.swift in Sources */,
 				2ABFF92E289B403500E43BC0 /* ExerciseDetailView.swift in Sources */,
 				54677B4F289C50B000A7FFBE /* SigninView.swift in Sources */,
+				8CAFDB16289E17920032BEE8 /* NoEntryView.swift in Sources */,
 				2ABFF926289B3F6B00E43BC0 /* NetworkError.swift in Sources */,
 				2ABFF92C289B401600E43BC0 /* ExerciseListView.swift in Sources */,
 				54677B48289C375500A7FFBE /* SignupView.swift in Sources */,
+				8CAFDB1A289E275B0032BEE8 /* WorkoutListViewModel.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
 				54677B53289C8D8F00A7FFBE /* SplashScreenView.swift in Sources */,
 				54677B4D289C505300A7FFBE /* FormField.swift in Sources */,
 				54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */,
+				8C9D09AC28A07ECB00A4E925 /* WorkoutDetailView.swift in Sources */,
 				2ABFF928289B3F9100E43BC0 /* ExerciseDBController.swift in Sources */,
 				2ABFF92A289B3FBA00E43BC0 /* Exercise.swift in Sources */,
 				E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */,
+				8CAFDB18289E17D00032BEE8 /* AddWorkoutSplitView.swift in Sources */,
 				54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */,
+				8CAFDB14289E0F070032BEE8 /* WorkoutList.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
-
 				54677B4B289C4C1D00A7FFBE /* ButtonLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,7 +543,6 @@
 			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
-
 	};
 	rootObject = 5404D5DC289B33B10023B4AA /* Project object */;
 }

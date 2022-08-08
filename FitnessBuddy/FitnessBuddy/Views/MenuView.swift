@@ -13,6 +13,7 @@ struct MenuView: View {
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor(named: "AccentDark")
+        //UITabBar.appearance().isTranslucent = true
         UITabBar.appearance().unselectedItemTintColor = UIColor(named: "UnselectedTabColor")
       }
     
@@ -29,7 +30,8 @@ struct MenuView: View {
 //                    Label("Health", systemImage: "waveform.path.ecg.rectangle.fill")
                 }
                 .tag(2)
-            Text("There will be a list of workouts")
+ 
+            WorkoutListView(listViewModel: WorkoutListViewModel())
                 .tabItem {
                     Label("My Workouts", systemImage: "figure.walk.circle.fill")
                 }
@@ -51,6 +53,8 @@ struct MenuView: View {
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        NavigationView {
+            MenuView()
+        }
     }
 }
