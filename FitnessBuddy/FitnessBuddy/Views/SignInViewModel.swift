@@ -16,6 +16,7 @@ class SignInViewModel: ObservableObject {
     @Published var signedIn = false
     @Published var successReset: Bool = false
     @Published var showForgotPasswordAlert: Bool = false
+    @Published var alertText: String = ""
     
      var isSignedIn: Bool {
         let auth = Auth.auth()
@@ -63,16 +64,21 @@ class SignInViewModel: ObservableObject {
     func forgotPassword(email: String) {
         let auth = Auth.auth()
         auth.sendPasswordReset(withEmail: email) { (error) in
-            self.showForgotPasswordAlert = true
+           
             if  error != nil {
+                self.showForgotPasswordAlert = true
+              //  self.alertText = "Please try again. You entered invalid email."
                 print(error ?? "There was an error while request was submitted")
+                
                 return
             }
             
             DispatchQueue.main.async {
                 
-                self.successReset = true
+              self.successReset = true
                 print("YOU WILL RECEIVE AN EMAIL TO RESET THE PASSWORD!!!")
+              //  self.alertText = "Please go to your email account to set up a new password"
+                
             }
             
         }
