@@ -15,7 +15,6 @@ import SwiftUI
 
 struct SigninView: View {
     
-    @State var showMainView = false
     @State private var emailText: String = ""
     @State private var passwordText: String = ""
     @ObservedObject var signInViewModel: SignInViewModel
@@ -49,7 +48,7 @@ struct SigninView: View {
                 
                 //MARK: - Sign in
                 
-                NavigationLink(destination: MenuView(), isActive: $showMainView){
+                NavigationLink(destination: MenuView(), isActive: $signInViewModel.signedIn){
                     
                     Button {
                         guard !emailText.isEmpty, !passwordText.isEmpty else {
@@ -57,8 +56,7 @@ struct SigninView: View {
                         signInViewModel.sighInUser(email: emailText, password: passwordText)
                         emailText = ""
                         passwordText = ""
-                        self.showMainView = true
-                        
+          
                         
                     } label: {
                         ButtonLabel(text: "Sign In", colorName: "AccentLight", textColor: "LightText")
@@ -85,8 +83,7 @@ struct SigninView: View {
                     if signInViewModel.isSignedIn {
                         signInViewModel.signOut()
                     }
-                    
-                    
+
                 } label: {
                     ButtonLabel(text: "Sign Out", colorName: "AccentLight", textColor: "LightText")
                 }
