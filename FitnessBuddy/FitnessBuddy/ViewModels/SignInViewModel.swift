@@ -16,7 +16,9 @@ class SignInViewModel: ObservableObject {
     @Published var signedIn = false
     @Published var successReset: Bool = false
     @Published var showForgotPasswordAlert: Bool = false
+    @Published var showSignUpAlert: Bool = false
     @Published var alertText: String = ""
+    @Published var rightSignUp: Bool = false
     
      var isSignedIn: Bool {
         let auth = Auth.auth()
@@ -47,13 +49,18 @@ class SignInViewModel: ObservableObject {
     func signUpUser(email: String, password: String, name: String) {
         let auth = Auth.auth()
         auth.createUser(withEmail: email, password: password) {(authResult, error) in
+            
             if error != nil {
-                print(error ?? "There was an error")
+                self.showSignUpAlert = true
+                print(error ?? "There was an error while SIGNING UP")
+                
                 return
             }
             self.uploadNewUserToDatabase(email: email, name: name)
             
             DispatchQueue.main.async {
+                print("SIGNED UP!")
+                self.rightSignUp = true
                 self.signedIn = true
             }
         }

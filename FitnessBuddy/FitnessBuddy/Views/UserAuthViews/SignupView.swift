@@ -32,7 +32,7 @@ struct SignupView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: MenuView(), isActive: $showMainView){
+                NavigationLink(destination: MenuView(), isActive: $signInVM.rightSignUp){
                     
                     Button {
                         guard !emailText.isEmpty, !passwordText.isEmpty, !usernameText.isEmpty else {
@@ -41,17 +41,22 @@ struct SignupView: View {
                         emailText = ""
                         passwordText = ""
                         usernameText = ""
-                        self.showMainView = true
+                    //  self.showMainView = true
 
                     } label: {
                         ButtonLabel(text: "Sign Up", colorName: "AccentLight", textColor: "LightText")
                     }
-                    
+                    .alert(Text("Important message"), isPresented: $signInVM.showSignUpAlert, actions: {
+                        Button("OK", role: .cancel, action: {})
+                    }, message: {
+                        Text("Please try again. The invalid email address.")
+                    })
                 }
               
                 Text("--   Or   --")
                 
                 NavigationLink {
+                    
                     SigninView(signInViewModel: signInVM)
                 } label: {
                     ButtonLabel(text: "Sign In Here", colorName: "LightBackground", textColor: "AccentDark")
