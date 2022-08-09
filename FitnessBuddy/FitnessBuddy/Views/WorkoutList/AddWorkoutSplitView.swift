@@ -23,10 +23,22 @@ struct AddWorkoutSplitView: View {
 
         ScrollView {
                 VStack(alignment: .leading) {
-                    Text("Add new workout:")
-                        .bold()
-                        .foregroundColor(.green)
-                        .font(.system(size: 30, design: .default))
+                    HStack(alignment: .center) {
+                        Text("Add new workout:")
+                            .bold()
+                            .foregroundColor(.green)
+                            .font(.system(size: 30, design: .default))
+                        
+                        Spacer()
+                        
+                        Button {
+                            showingPopup = false
+                        } label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.system(size: 30))
+                        }
+
+                    }
 
                     TextField("Enter workout name", text: $title)
 
@@ -35,15 +47,9 @@ struct AddWorkoutSplitView: View {
                     .datePickerStyle(GraphicalDatePickerStyle())
                     .frame(maxHeight: .infinity)
                 }.padding()
-
+            
             Button(action: saveButtonPressed, label: {
-                Text("Save".uppercased())
-                    .foregroundColor(.white)
-                    .font(.headline)
-                    .frame(height: 40)
-                    .frame(maxWidth: 120)
-                    .background(Color.accentColor)
-                    .cornerRadius(10)
+                ButtonLabel(text: "Save", colorName: "AccentLight", textColor: "LightText")
             })
         }.alert(isPresented: $showAlert, content: getAlert)
     }
