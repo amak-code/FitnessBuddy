@@ -177,7 +177,6 @@
 				54CC65AA28A19EDC00AA07CB /* WorkoutList */,
 				2ABFF920289B3E7E00E43BC0 /* Exercise */,
 				54677B44289C2D2400A7FFBE /* UserAuthViews */,
-				E5D77DA8289C44250032A0AB /* SignInViewModel.swift */,
 				54677B40289B8B3F00A7FFBE /* MenuView.swift */,
 				54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */,
 				54EE93DF289E1292005AA463 /* ProfileView.swift */,
@@ -189,6 +188,7 @@
 		5404D5F8289B34040023B4AA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E5D77DA8289C44250032A0AB /* SignInViewModel.swift */,
 				54CC65B528A19F0700AA07CB /* WorkoutListViewModel.swift */,
 			);
 			path = ViewModels;
