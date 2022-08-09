@@ -61,7 +61,6 @@ struct SigninView: View {
                     } label: {
                         ButtonLabel(text: "Sign In", colorName: "AccentLight", textColor: "LightText")
                     }
-                    
                 }
                 
                 Text("--   Or   --")
