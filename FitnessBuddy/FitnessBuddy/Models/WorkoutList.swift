@@ -11,11 +11,11 @@ struct WorkoutList: Identifiable, Codable, Equatable {
     var date: Date
     var timestamp: String
     var id = UUID()
-    var exercises: [ExerciseUser] = []
+    var exercises: [ExerciseInWorkout] = []
 }
 
 
-struct ExerciseUser: Identifiable, Codable, Equatable {
+struct ExerciseInWorkout: Identifiable, Codable, Equatable {
     
     var id = UUID()
     var sets: Int
@@ -23,3 +23,4 @@ struct ExerciseUser: Identifiable, Codable, Equatable {
     var maxWeight: Double
     
 }
+
