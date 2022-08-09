@@ -38,7 +38,7 @@ struct MenuView: View {
                     Label("Player", systemImage: "play.fill")
                 }
                 .tag(4)
-            ProfileView()
+            ProfileView(signInVM: SignInViewModel(), listViewModel: WorkoutListViewModel())
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")
                 }

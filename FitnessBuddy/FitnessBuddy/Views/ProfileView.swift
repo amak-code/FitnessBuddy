@@ -9,10 +9,14 @@ import SwiftUI
 
 struct ProfileView: View {
     @State private var isNotified: Bool = true
+    @State var name = ""
+    @State var showSigninView = false
+    @ObservedObject var signInVM: SignInViewModel
+    @ObservedObject var listViewModel: WorkoutListViewModel
     var body: some View {
         VStack {
             Spacer()
-            Text("Hi, username!")
+            Text("Hi, \(name)!")
             Spacer()
             HStack(spacing: 20) {
                 Text("Change unit")
@@ -24,23 +28,37 @@ struct ProfileView: View {
                 .pickerStyle(SegmentedPickerStyle())
                 .frame(width: 100)
                 .padding(.vertical)
+               
             }
             Spacer()
             
-            Button {
-                // TODO: Call logout function
-            } label: {
-                ButtonLabel(text: "Logout", colorName: "AccentLight", textColor: "LightText")
+            NavigationLink(destination: SigninView(signInViewModel:signInVM), isActive:$showSigninView){
+                Button {
+                        signInVM.signOut()
+                        self.showSigninView = true
+                } label: {
+                    ButtonLabel(text: "Sign Out", colorName: "AccentLight", textColor: "LightText")
+                }
             }
             Spacer()
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
+        }.onAppear {
+           // getUser()
+            DispatchQueue.main.async {
+                getUser()
+            }
         }
+    }
+    func getUser() {
+            let defaults = UserDefaults.standard
+            listViewModel.getUserInfo()
+           name = defaults.string(forKey: "userNameKey")!
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
-    }
-}
+//struct ProfileView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProfileView(listViewModel: WorkoutListViewModel())
+//    }
+//}

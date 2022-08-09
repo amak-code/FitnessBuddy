@@ -51,7 +51,7 @@ struct SplashScreenView: View {
                         
                         //MARK: - if you comment out below line you will be able to test sign in and sign up view even if you signed in before
                         
-                        self.userSignedIn = signInViewModel.isSignedIn
+                        //self.userSignedIn = signInViewModel.isSignedIn
                     }
                 }
             }
