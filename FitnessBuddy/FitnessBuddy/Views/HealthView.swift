@@ -10,28 +10,45 @@ import HealthKit
 
 struct HealthView: View {
     @State var healthManager = HealthManager()
-    @State var heartRate: Double = 0.0
+    @State var heartRate: Double = 60.0
+    
+    @State var sliderValue: Double = 25
+    @State var color: Color = .red
+    @State private var progress = 0.5
     
     var body: some View {
-        
-        
-        HStack(spacing: 30) {
-                ZStack {
-                    Color.gray.edgesIgnoringSafeArea(.all)
-                    Text("HeartRate")
-                    .bold()
-                }.frame(width: 140, height: 80)
-
-                ZStack {
-                    Color.gray.edgesIgnoringSafeArea(.all)
-
-                    Text("\(heartRate)")
-                    .bold()
-                }.frame(width: 140, height: 80)
-        }.onAppear {
-            healthManager.autorizeHealthKit()
-            getLatestHeartRate()
+        NavigationView {
+        VStack(spacing: 30) {
+            Text("Heart rate: \(String(format: "%.0f", heartRate))")
+                .bold()
+                .foregroundColor(color)
+            ZStack {
+                Rectangle().fill(LinearGradient(colors: [.blue, .green, .yellow, .orange, .red], startPoint: .leading, endPoint: .trailing))
+                    .frame(width: UIScreen.main.bounds.width - 10, height: 10)
+                    .cornerRadius(15)
+                    .padding(.horizontal)
+            }
             
+            Text("Your age: \(String(format: "%.0f", sliderValue))")
+            Slider(
+                value: $sliderValue,
+                in: 1...150,
+                step: 1.0) { (_) in
+                    color = .green
+                }
+                .padding()
+            
+            Image("hrzones")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                    
+                .navigationTitle("Check your latest heart rate")
+                .navigationBarTitleDisplayMode(.inline)
+            }
+        }
+        .onAppear {
+//            healthManager.autorizeHealthKit()
+//            getLatestHeartRate()
         }
     }
     
@@ -63,6 +80,8 @@ struct HealthView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HealthView()
+        NavigationView {
+            HealthView()
+        }
     }
 }
