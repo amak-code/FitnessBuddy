@@ -7,7 +7,6 @@
 
 import SwiftUI
 import HealthKit
-import SwiftUITooltip
 
 struct HealthView: View {
     @State var healthManager = HealthManager()
