@@ -10,8 +10,10 @@ import SwiftUI
 struct MenuView: View {
     
     @State private var selection = 1
+    @ObservedObject var signInVM: SignInViewModel
     
-    init() {
+    init(signInModel: SignInViewModel) {
+        self.signInVM = signInModel
         UITabBar.appearance().backgroundColor = UIColor(named: "AccentDark")
         UITabBar.appearance().unselectedItemTintColor = UIColor(named: "UnselectedTabColor")
       }
@@ -38,7 +40,7 @@ struct MenuView: View {
                     Label("Player", systemImage: "play.fill")
                 }
                 .tag(4)
-            ProfileView(signInVM: SignInViewModel(), listViewModel: WorkoutListViewModel())
+            ProfileView(signInVM: signInVM, listViewModel: WorkoutListViewModel())
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")
                 }
@@ -47,11 +49,5 @@ struct MenuView: View {
         .accentColor(Color("AccentLight"))
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
-    }
-}
-
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView()
     }
 }

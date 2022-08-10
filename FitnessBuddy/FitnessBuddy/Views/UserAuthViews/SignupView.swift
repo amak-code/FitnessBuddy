@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SignupView: View {
     
-    @ObservedObject var signInVM = SignInViewModel()
+    @ObservedObject var signInVM: SignInViewModel
     @State var showMainView = false
     @State var emailText: String
     @State var usernameText: String
@@ -32,7 +32,7 @@ struct SignupView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: MenuView(), isActive: $signInVM.rightSignUp){
+                NavigationLink(destination: MenuView(signInModel: signInVM), isActive: $signInVM.rightSignUp){
                     
                     Button {
                         guard !emailText.isEmpty, !passwordText.isEmpty, !usernameText.isEmpty else {

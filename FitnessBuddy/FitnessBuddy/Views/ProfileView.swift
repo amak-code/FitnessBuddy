@@ -53,12 +53,6 @@ struct ProfileView: View {
     func getUser() {
             let defaults = UserDefaults.standard
             listViewModel.getUserInfo()
-           name = defaults.string(forKey: "userNameKey")!
+           name = defaults.string(forKey: "userNameKey") ?? ""
     }
 }
-
-//struct ProfileView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProfileView(listViewModel: WorkoutListViewModel())
-//    }
-//}

@@ -69,6 +69,7 @@ struct ExerciseInWorkoutDetailView: View {
             
             ButtonLabel(text: "Save", colorName: "AccentLight", textColor: "LightText")
         }
+
     }
 }
 
