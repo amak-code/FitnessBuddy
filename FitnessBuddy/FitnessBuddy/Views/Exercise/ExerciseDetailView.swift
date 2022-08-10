@@ -11,18 +11,24 @@ struct ExerciseDetailView: View {
     let exercise: Exercise
     var body: some View {
         VStack{
-            Text(exercise.name)
-            Text(exercise.bodyPart)
+            TitleText(text: exercise.name)
+            Text(exercise.bodyPart.rawValue)
             Text(exercise.equipment)
             GifImage(exercise.gifUrl)
+                .frame(width: UIScreen.screenWidth - 20, height: UIScreen.screenHeight/2 - 20, alignment: .center)
             Text(exercise.id)
             Text(exercise.target)
+        }
+        .toolbar {
+            NavigationLink("Add to Workout") {
+                AddExerciseView(exercise: exercise)
+            }
         }
     }
 }
 
 struct ExerciseDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseDetailView(exercise: Exercise(bodyPart: "bodypart: legs", equipment: "squat rack", gifUrl: "gif placement", id: "id placement", name: "deadlift", target: "target muscle: "))
+        ExerciseDetailView(exercise: Exercise(bodyPart: bodyParts.lowerlegs, equipment: "squat rack", gifUrl: "gif placement", id: "id placement", name: "deadlift", target: "target muscle: "))
     }
 }

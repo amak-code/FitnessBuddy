@@ -8,7 +8,7 @@
 import Foundation
 
 struct Exercise: Identifiable, Decodable {
-    let bodyPart: String
+    let bodyPart: bodyParts
     let equipment: String
     let gifUrl: String
     let id: String
@@ -16,7 +16,7 @@ struct Exercise: Identifiable, Decodable {
     let target: String
 }
 
-enum bodyParts: String, CaseIterable{
+enum bodyParts: String, Decodable, CaseIterable{
     case back = "back"
     case cardio = "cardio"
     case chest = "chest"
@@ -28,3 +28,4 @@ enum bodyParts: String, CaseIterable{
     case upperlegs = "upper legs"
     case waist = "waist"
 }
+
