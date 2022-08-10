@@ -30,16 +30,15 @@ class SignInViewModel: ObservableObject {
         let auth = Auth.auth()
         auth.signIn(withEmail: email, password: password) {(authResult, error) in
           guard authResult != nil, error == nil else{
-               
                 return
             }
+            
             DispatchQueue.main.async {
                 self.signedIn = true
             }
             
             //test for sign in
             if auth.currentUser != nil {
-                
                 print("SIGNED IN!!!!")
             }
         }

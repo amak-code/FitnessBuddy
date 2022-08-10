@@ -13,15 +13,15 @@ struct SplashScreenView: View {
     @State private var size = 0.8
     @State private var opacity = 0.5
     @State var userSignedIn: Bool = false
-    @ObservedObject var signInViewModel: SignInViewModel
+    @ObservedObject var signInViewModel = SignInViewModel()
     
     var body: some View {
         if isActive {
             if userSignedIn {
-                MenuView()
+                MenuView(signInModel: signInViewModel)
             }
             else {
-                SignupView(emailText: "", usernameText: "", passwordText: "")
+                SignupView(signInVM: signInViewModel, emailText: "", usernameText: "", passwordText: "")
             }
         } else {
             VStack {

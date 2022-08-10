@@ -48,7 +48,7 @@ struct SigninView: View {
                 
                 //MARK: - Sign in
                 
-                NavigationLink(destination: MenuView(), isActive: $signInViewModel.signedIn){
+                NavigationLink(destination: MenuView(signInModel: signInViewModel), isActive: $signInViewModel.signedIn){
                     
                     Button {
                         guard !emailText.isEmpty, !passwordText.isEmpty else {
@@ -56,8 +56,6 @@ struct SigninView: View {
                         signInViewModel.sighInUser(email: emailText, password: passwordText)
                         emailText = ""
                         passwordText = ""
-          
-                        
                     } label: {
                         ButtonLabel(text: "Sign In", colorName: "AccentLight", textColor: "LightText")
                     }
@@ -68,7 +66,7 @@ struct SigninView: View {
                 //MARK: - Sign Up
                 
                 NavigationLink {
-                    SignupView(emailText: "", usernameText: "", passwordText: "")
+                    SignupView(signInVM: signInViewModel, emailText: "", usernameText: "", passwordText: "")
                 } label: {
                     ButtonLabel(text: "Create an Account", colorName: "LightBackground", textColor: "AccentDark")
                 }
