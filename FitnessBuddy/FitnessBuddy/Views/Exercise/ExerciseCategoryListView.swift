@@ -9,25 +9,24 @@ import SwiftUI
 
 struct ExerciseCategoryListView: View {
     @ObservedObject var evModel = ExerciseCategoryViewModel()
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
         
-        NavigationView {
-            VStack{
-                List {
-                    ForEach(evModel.categories, id: \.self) { category in
-                        NavigationLink(destination: ExerciseListView(exercises: evModel.categoryExercises[category] ?? [])) {
-                            Text(category)
-                            Text("")
-                        }
+        
+        ScrollView {
+            TitleText(text: "Explore  Exercises")
+            LazyVGrid(columns: columns, alignment: .center){
+                ForEach(evModel.categories, id: \.self) { category in
+                    NavigationLink(destination: ExerciseListView(exercises: evModel.categoryExercises[category] ?? [])) {
+                        Card(text: category,
+                             imageName: category)
+                        
                     }
                 }
-                .listStyle(.plain)
-                
+                .padding()
             }
-            .navigationTitle("By Body Parts")
         }
-        
     }
     
 }
@@ -46,7 +45,9 @@ class ExerciseCategoryViewModel: ObservableObject {
     
     init() {
         getAllExercises()
+        print("Do i reload everysingle time")
     }
+
     func getAllExercises() {
         
         ExerciseDBController.fetchExercises() { result in
@@ -66,7 +67,7 @@ class ExerciseCategoryViewModel: ObservableObject {
             
             self.categories.append(bpart.rawValue)
             let filtered = self.exercises.filter{ exercise in
-                return exercise.bodyPart == bpart.rawValue }
+                return exercise.bodyPart.rawValue == bpart.rawValue }
             self.categoryExercises[bpart.rawValue] = filtered
         }
     }
