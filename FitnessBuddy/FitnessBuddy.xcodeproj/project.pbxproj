@@ -41,6 +41,7 @@
 		8C8FD616289C33A700C889A7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD615289C33A700C889A7 /* FirebaseDatabase */; };
 		8C8FD618289C33A700C889A7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD617289C33A700C889A7 /* FirebaseFirestore */; };
 		E50BF1DC28A1DA2E00403A74 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BF1DB28A1DA2E00403A74 /* GifImage.swift */; };
+		E586C86028A32BC800A58F38 /* ExerciseInWorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E586C85F28A32BC800A58F38 /* ExerciseInWorkoutDetailView.swift */; };
 		E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D77DA8289C44250032A0AB /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		54EE93E1289E12B7005AA463 /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
 		8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E50BF1DB28A1DA2E00403A74 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GifImage.swift; path = ../GifImage.swift; sourceTree = "<group>"; };
+		E586C85F28A32BC800A58F38 /* ExerciseInWorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInWorkoutDetailView.swift; sourceTree = "<group>"; };
 		E5D77DA8289C44250032A0AB /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				54CC65B828A1ACA100AA07CB /* ListOfExercises.swift */,
+				E586C85F28A32BC800A58F38 /* ExerciseInWorkoutDetailView.swift */,
 			);
 			path = ListOfExercises;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				2ABFF92A289B3FBA00E43BC0 /* Exercise.swift in Sources */,
 				E5D77DA9289C44250032A0AB /* SignInViewModel.swift in Sources */,
 				54CC65B928A1ACA100AA07CB /* ListOfExercises.swift in Sources */,
+				E586C86028A32BC800A58F38 /* ExerciseInWorkoutDetailView.swift in Sources */,
 				54677B41289B8B4000A7FFBE /* MenuView.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
 				54677B4B289C4C1D00A7FFBE /* ButtonLabel.swift in Sources */,

@@ -24,7 +24,8 @@ struct WorkoutListView: View {
                         .transition(AnyTransition.opacity.animation(.easeIn))
                     } else {
                         List {
-                            ForEach(listViewModel.WorkoutLists) { list in ListRowView(list: list)
+                            ForEach(listViewModel.WorkoutLists) { list in
+                                ListRowView(list: list)
 
                         }.onDelete(perform: listViewModel.deleteEntryFromDatebase(indexSet:))
                              //.padding()
@@ -67,7 +68,7 @@ struct ListRowView: View {
     @State var list: WorkoutList
     var body: some View {
         VStack {
-            NavigationLink(destination: ListOfExercises()){
+            NavigationLink(destination: ListOfExercises(listViewModel: viewModel, exercises: list.exercises)){
             Text(list.title)
             }
         }
