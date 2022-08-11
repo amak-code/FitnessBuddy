@@ -37,12 +37,15 @@ struct ListOfExercises: View {
                 }.navigationTitle("Workout Details")
                 // .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
-                        NavigationLink {
-                            addExerciseView(showingPopup: $showingPopup, listViewModel: WorkoutListViewModel(), workoutlist: workoutlist)
+                        Button {
+                            showingPopup = true
                         } label: {
                             Image(systemName: "plus")
                         }
-                    }
+                            }
+                
+                
+
             }
         }.onAppear{listViewModel.getExerciseEntries(workouttimestamp: workoutlist.timestamp)}
     }
