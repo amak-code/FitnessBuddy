@@ -22,7 +22,7 @@ struct addExerciseView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 15) {
                 HStack(alignment: .center) {
                     Text("Add new exercise:")
                         .bold()
@@ -39,26 +39,28 @@ struct addExerciseView: View {
                     }
                 }
                 TextField("Enter exercise name", text: $exercisename).frame(height: 55)
-                    .textFieldStyle(PlainTextFieldStyle())
                     .padding([.horizontal], 4)
                     .cornerRadius(16)
                     .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
                     .padding([.horizontal], 24)
                 
                 HStack(alignment: .center) {
-                    Text("Number of sets:");  TextField("Enter number of sets", text: $numberofsets).textFieldStyle(PlainTextFieldStyle())
+                    Text("Number of sets:  ");
+                    TextField("Enter sets...", text: $numberofsets)
                         .padding([.horizontal], 4)
                         .cornerRadius(16)
                         .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
-                    .padding([.horizontal], 24)}
+                        .padding([.horizontal], 24)}
                 HStack(alignment: .center) {
-                    Text("Number of reps:");  TextField("Enter number of reps", text: $numberofreps).textFieldStyle(PlainTextFieldStyle())
+                    Text("Number of reps:  ");
+                    TextField("Enter reps...", text: $numberofreps)
                         .padding([.horizontal], 4)
                         .cornerRadius(16)
                         .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
-                    .padding([.horizontal], 24)}
+                        .padding([.horizontal], 24)}
                 HStack(alignment: .center) {
-                    Text("Maximum weight:");  TextField("Enter maximum weight", text: $maximumweight).textFieldStyle(PlainTextFieldStyle())
+                    Text("Maximum weight:");
+                    TextField("Enter weight...", text: $maximumweight)
                         .padding([.horizontal], 4)
                         .cornerRadius(16)
                         .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))

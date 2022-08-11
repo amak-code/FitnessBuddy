@@ -27,9 +27,9 @@ struct ListOfExercises: View {
                         List {
                             ForEach(Array(zip(1..., listViewModel.exercises)), id: \.1.id) { num, exercise in
                                 NavigationLink {
-                                    ExerciseInWorkoutDetailView(showingPopup: $showingPopup, listViewModel: WorkoutListViewModel(), workoutlist: workoutlist, exercise: exercise)
+                                    ExerciseInWorkoutDetailView(listViewModel: WorkoutListViewModel(), workoutlist: workoutlist, exercise: exercise)
                                                     } label: {
-                                                        ExerciseRow(exercise: exercise, workoutlist: workoutlist, showingPopup: $showingPopup, num: String(num))
+                                                        ExerciseRow(exercise: exercise, num: String(num))
                                                     }
                             }.onDelete(perform: deleteexercise(indexSet:))
                         }
@@ -37,8 +37,8 @@ struct ListOfExercises: View {
                 }.navigationTitle("Workout Details")
                 // .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
-                        NavigationLink {
-                            addExerciseView(showingPopup: $showingPopup, listViewModel: WorkoutListViewModel(), workoutlist: workoutlist)
+                        Button {
+                            showingPopup = true
                         } label: {
                             Image(systemName: "plus")
                         }
@@ -64,40 +64,38 @@ struct ListOfExercises_Previews: PreviewProvider {
 
 struct ExerciseRow: View{
     var exercise: ExerciseInWorkout
-    @State var workoutlist: WorkoutList
-    @Binding var showingPopup: Bool
     var num: String
+    
     var body: some View {
         VStack(alignment: .leading){
-            
-//            NavigationLink(destination: ExerciseInWorkoutDetailView(showingPopup: $showingPopup, listViewModel: WorkoutListViewModel(), workoutlist: workoutlist, exercise: exercise)) {
                 Text("\(num). \(exercise.name)")
-                HStack{
+                    .bold()
+                    .font(.system(size: 20))
+                HStack {
                     HStack {
                         Text("Sets: ")
-                      
-                        Text(" \(exercise.sets)")
-                            .frame(width: 40, height: 30,  alignment: .center)
-                            .background(.gray)
+                        Text("\(exercise.sets)")
+                            .frame(width: 30, height: 30, alignment: .center)
+                            .background(Color("UnselectedTabColor"))
                             .multilineTextAlignment(.center)
-                        
                     }
-                    HStack{
+                    
+                    HStack {
                         Text("Reps: ")
-                        Text(" \(exercise.reps)")
+                        Text("\(exercise.reps)")
                             .frame(width: 30, height: 30, alignment: .center)
-                            .background(.gray)
-                        
+                            .background(Color("UnselectedTabColor"))
+                            .multilineTextAlignment(.center)
                     }
-                    HStack{
-                        Text("Max Weight: ")
-                            .lineLimit(1)
-                        Text(" \(exercise.maxWeight)")
+                    
+                    HStack {
+                        Text("Weight: ")
+                        Text("\(exercise.maxWeight)")
                             .frame(width: 30, height: 30, alignment: .center)
-                            .background(.gray)
+                            .background(Color("UnselectedTabColor"))
+                            .multilineTextAlignment(.center)
                     }
                 }
         }
     }
 }
-//}

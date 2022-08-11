@@ -13,7 +13,6 @@ struct ExerciseInWorkoutDetailView: View {
     @State var numberofreps: String = ""
     @State var maximumweight: String = ""
     @Environment(\.dismiss) private var dismiss
-    @Binding var showingPopup: Bool
     @State var showAlert: Bool = false
     @State var alertExerciseName: String = ""
     @Environment(\.presentationMode) var presentationMode
@@ -23,43 +22,35 @@ struct ExerciseInWorkoutDetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
-                HStack(alignment: .center) {
-                    Text("Your exercise detail:")
-                        .bold()
-                        .foregroundColor(.green)
-                        .font(.system(size: 30, design: .default))
-                    
-                    Spacer()
-                    
-                    Button {
-                        showingPopup = false
-                    } label: {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.system(size: 30))
-                    }
-                }
+            VStack(alignment: .leading, spacing: 15) {
+                Text("Your exercise detail:")
+                    .bold()
+                    .foregroundColor(.green)
+                    .font(.system(size: 30, design: .default))
+                
                 TextField(exercise.name, text: $exercisename).frame(height: 55)
-                    .textFieldStyle(PlainTextFieldStyle())
                     .padding([.horizontal], 4)
                     .cornerRadius(16)
                     .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
                     .padding([.horizontal], 24)
                 
-                HStack(alignment: .center) {
-                    Text("Number of sets:");  TextField(exercise.sets, text: $numberofsets).textFieldStyle(PlainTextFieldStyle())
+                HStack {
+                    Text("Number of sets:  ");
+                    TextField(exercise.sets, text: $numberofsets)
                         .padding([.horizontal], 4)
                         .cornerRadius(16)
                         .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
-                    .padding([.horizontal], 24)}
-                HStack(alignment: .center) {
-                    Text("Number of reps:");  TextField(exercise.reps, text: $numberofreps).textFieldStyle(PlainTextFieldStyle())
+                        .padding([.horizontal], 24)}
+                HStack {
+                    Text("Number of reps:  ");
+                    TextField(exercise.reps, text: $numberofreps)
                         .padding([.horizontal], 4)
                         .cornerRadius(16)
                         .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
-                    .padding([.horizontal], 24)}
-                HStack(alignment: .center) {
-                    Text("Maximum weight:");  TextField(exercise.maxWeight, text: $maximumweight).textFieldStyle(PlainTextFieldStyle())
+                        .padding([.horizontal], 24)}
+                HStack {
+                    Text("Maximum weight:");
+                    TextField(exercise.maxWeight, text: $maximumweight)
                         .padding([.horizontal], 4)
                         .cornerRadius(16)
                         .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
@@ -81,7 +72,6 @@ struct ExerciseInWorkoutDetailView: View {
         } else {
             WorkoutListViewModel.uploadExerciseToDatabase(exercisename: exercisename, sets: numberofsets, reps: numberofreps, weight: maximumweight, workouttimestamp: workoutlist.timestamp, timestamp: exercise.timestamp)
             presentationMode.wrappedValue.dismiss()
-            showingPopup = false
         }
     }
     
