@@ -13,7 +13,7 @@ import FirebaseDatabase
 class WorkoutListViewModel: ObservableObject {
 
     @Published var WorkoutLists: [WorkoutList] = []
-
+    @Published var exercises: [ExerciseInWorkout] = []
     init() {
         getEntries()
     }
@@ -52,6 +52,23 @@ class WorkoutListViewModel: ObservableObject {
             }
         })
     }
+    
+    public func getExerciseEntries(workouttimestamp: String){
+        let ref = Database.database().reference()
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print("User not found")
+            return
+        }
+        ref.child("users").child(uid).child("entries").child(workouttimestamp).child("exercises").observe(.value, with: { (snapshot) in
+            self.exercises = []
+            for snap in snapshot.children {
+                let userSnap = snap as! DataSnapshot
+                let userdict = userSnap.value as? NSDictionary
+                let exercise = ExerciseInWorkout(name: userdict?.value(forKey: "exercisename") as! String, sets: userdict?.value(forKey: "sets") as! String, reps: userdict?.value(forKey: "reps") as! String, maxWeight: userdict?.value(forKey: "weight") as! String, timestamp: userSnap.key)
+                self.exercises.append(exercise)
+            }
+        })
+    }
 
     static func uploadEntryToDatabase(title: String, date: String, timestamp: String) {
         let rootref = Database.database().reference()
@@ -60,6 +77,18 @@ class WorkoutListViewModel: ObservableObject {
         ref.child(uid!).child("entries").updateChildValues([timestamp: [
             "title": title,
             "date": date
+        ]])
+    }
+    
+    static func uploadExerciseToDatabase(exercisename: String, sets: String, reps: String, weight: String, workouttimestamp: String, timestamp: String) {
+        let rootref = Database.database().reference()
+        let ref = rootref.child("users")
+        let uid = Auth.auth().currentUser?.uid
+        ref.child(uid!).child("entries").child(workouttimestamp).child("exercises").updateChildValues([timestamp: [
+            "exercisename": exercisename,
+            "sets": sets,
+            "reps": reps,
+            "weight": weight
         ]])
     }
 
@@ -77,6 +106,19 @@ class WorkoutListViewModel: ObservableObject {
             }
         }
     }
+    
+    func deleteExerciseEntryFromDatabase(index: Int, workouttimestamp: String) {
+        let timestamp = exercises[index].timestamp
+        let rootref = Database.database().reference()
+        let ref = rootref.child("users")
+        let uid = Auth.auth().currentUser?.uid
+        ref.child(uid!).child("entries").child(workouttimestamp).child("exercises").child(timestamp).removeValue { (error, ref) in
+            if error != nil {
+                print("error \(String(describing: error))")
+            }
+        }
+    }
+
 
     static func dateToString(date: Date) -> String {
         let formatter = DateFormatter()
