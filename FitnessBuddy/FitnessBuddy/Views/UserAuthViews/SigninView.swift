@@ -48,7 +48,7 @@ struct SigninView: View {
                 
                 //MARK: - Sign in
                 
-                NavigationLink(destination: MenuView(signInModel: signInViewModel), isActive: $signInViewModel.signedIn){
+                NavigationLink(destination: MenuView(), isActive: $signInViewModel.signedIn){
                     
                     Button {
                         guard !emailText.isEmpty, !passwordText.isEmpty else {
