@@ -23,9 +23,9 @@ struct HealthView: View {
     @State private var zone5: Double = 0
     
     var body: some View {
-        NavigationView {
         ScrollView {
             VStack(spacing: 30) {
+                TitleText(text: "Health")
                 HStack {
                     Text("Your latest heart rate: \(String(format: "%.0f", heartRate)) bpm")
                         .bold()
@@ -82,7 +82,6 @@ struct HealthView: View {
                     .navigationTitle("")
                     .navigationBarTitleDisplayMode(.inline)
             }
-        }
         }
         .onAppear {
             healthManager.autorizeHealthKit()

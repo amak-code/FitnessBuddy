@@ -72,18 +72,6 @@ struct SigninView: View {
                 }
                 
                 Spacer()
-                
-                
-                //MARK: -  Test for Sign Out Button
-                Button {
-                    
-                    if signInViewModel.isSignedIn {
-                        signInViewModel.signOut()
-                    }
-
-                } label: {
-                    ButtonLabel(text: "Sign Out", colorName: "AccentLight", textColor: "LightText")
-                }
             }
             .padding(.top, 60)
             .navigationTitle("Sign In")

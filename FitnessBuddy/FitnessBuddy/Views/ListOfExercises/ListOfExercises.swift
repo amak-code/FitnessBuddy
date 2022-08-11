@@ -20,6 +20,7 @@ struct ListOfExercises: View {
                 addExerciseView(showingPopup: $showingPopup, listViewModel: WorkoutListViewModel(), workoutlist: workoutlist)
             } else {
                 VStack{
+                    TitleText(text: "Workout Details")
                     if listViewModel.exercises.isEmpty {
                         NoExerciseView(showingPopup: $showingPopup, workoutlist: workoutlist)
                             .transition(AnyTransition.opacity.animation(.easeIn))
@@ -34,8 +35,7 @@ struct ListOfExercises: View {
                             }.onDelete(perform: deleteexercise(indexSet:))
                         }
                     }
-                }.navigationTitle("Workout Details")
-                // .navigationBarTitleDisplayMode(.inline)
+                }
                     .toolbar {
                         Button {
                             showingPopup = true

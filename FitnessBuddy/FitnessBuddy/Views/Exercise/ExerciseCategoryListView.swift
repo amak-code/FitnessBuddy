@@ -45,7 +45,8 @@ struct ExerciseCategoryListView: View {
                 }
             }
         }
-        .navigationTitle("Explore Exercises")
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
