@@ -13,18 +13,33 @@ struct ExerciseCategoryListView: View {
     
     var body: some View {
         
-        
-        ScrollView {
-            TitleText(text: "Explore  Exercises")
-            LazyVGrid(columns: columns, alignment: .center){
-                ForEach(evModel.categories, id: \.self) { category in
-                    NavigationLink(destination: ExerciseListView(exercises: evModel.categoryExercises[category] ?? [])) {
-                        Card(text: category,
-                             imageName: category)
-                        
+        ZStack {
+            ScrollView {
+                TitleText(text: "Explore  Exercises")
+                LazyVGrid(columns: columns, alignment: .center){
+                    ForEach(evModel.categories, id: \.self) { category in
+                        NavigationLink(destination: ExerciseListView(exercises: evModel.categoryExercises[category] ?? [])) {
+                            Card(text: category,
+                                 imageName: category)
+                            
+                        }
                     }
+                    .padding()
                 }
-                .padding()
+            }
+            
+            if evModel.categoryExercises.isEmpty {
+                VStack {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .tint(Color("AccentDark"))
+                        .scaleEffect(2)
+                        .padding(.bottom)
+                    Text("Loading exercises...")
+                        .italic()
+                        .font(.caption)
+                        .foregroundColor(Color("AccentDark"))
+                }
             }
         }
     }
