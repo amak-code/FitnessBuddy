@@ -27,8 +27,8 @@ class WorkoutListViewModel: ObservableObject {
         }
         ref.child("users").child(uid).observe(.value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String : Any] {
-                let email = dictionary["email"] as! String
-                let name = dictionary["name"] as! String
+                let email = dictionary["email"] as? String  == nil ? "email_not_found" : (dictionary["email"] as? String)
+                let name = dictionary["name"] as? String == nil ? "name_not_found" : dictionary["name"] as? String
                 defaults.set(email, forKey: "userEmailKey")
                 defaults.set(name, forKey: "userNameKey")
             }

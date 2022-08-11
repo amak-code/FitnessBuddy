@@ -11,10 +11,9 @@ struct ExerciseListView: View {
     var exercises: [Exercise]
     var body: some View {
         
-            VStack{
-                TitleText(text: "Exercises")
-                    .padding()
-                List {
+        VStack{
+            
+            List {
                     ForEach(exercises) { exercise in
                         NavigationLink(destination: ExerciseDetailView(exercise: exercise)) {
                             HStack {
@@ -25,10 +24,12 @@ struct ExerciseListView: View {
                             }
                         }
                     }
-                }
-                .listStyle(.plain)
             }
+            .listStyle(.plain)
+            
         }
+        .navigationTitle("Exercises")
+    }
     
 }
 
