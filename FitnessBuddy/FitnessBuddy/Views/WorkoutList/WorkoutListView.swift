@@ -68,7 +68,7 @@ struct ListRowView: View {
     @State var list: WorkoutList
     var body: some View {
         VStack {
-            NavigationLink(destination: ListOfExercises(listViewModel: viewModel, exercises: list.exercises)){
+            NavigationLink(destination: ListOfExercises(listViewModel: viewModel, workoutlist: list, exercises: list.exercises)){
             Text(list.title)
             }
         }

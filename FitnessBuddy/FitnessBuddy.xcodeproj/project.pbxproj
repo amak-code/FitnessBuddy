@@ -38,6 +38,8 @@
 		54CC65B928A1ACA100AA07CB /* ListOfExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65B828A1ACA100AA07CB /* ListOfExercises.swift */; };
 		54EE93E0289E1292005AA463 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE93DF289E1292005AA463 /* ProfileView.swift */; };
 		54EE93E2289E12B7005AA463 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE93E1289E12B7005AA463 /* HealthView.swift */; };
+		8C2A065528A4B2820092239B /* addExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A065428A4B2820092239B /* addExerciseView.swift */; };
+		8C2A065728A4B3110092239B /* NoExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A065628A4B3110092239B /* NoExerciseView.swift */; };
 		8C8FD60D289C317000C889A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */; };
 		8C8FD610289C33A700C889A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD60F289C33A700C889A7 /* FirebaseAnalytics */; };
 		8C8FD612289C33A700C889A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8FD611289C33A700C889A7 /* FirebaseAuth */; };
@@ -83,6 +85,8 @@
 		54CC65B828A1ACA100AA07CB /* ListOfExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfExercises.swift; sourceTree = "<group>"; };
 		54EE93DF289E1292005AA463 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		54EE93E1289E12B7005AA463 /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		8C2A065428A4B2820092239B /* addExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addExerciseView.swift; sourceTree = "<group>"; };
+		8C2A065628A4B3110092239B /* NoExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoExerciseView.swift; sourceTree = "<group>"; };
 		8C8FD60C289C317000C889A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E50BF1DB28A1DA2E00403A74 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GifImage.swift; path = ../GifImage.swift; sourceTree = "<group>"; };
 		E586C85F28A32BC800A58F38 /* ExerciseInWorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInWorkoutDetailView.swift; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				54CC65B828A1ACA100AA07CB /* ListOfExercises.swift */,
+				8C2A065428A4B2820092239B /* addExerciseView.swift */,
+				8C2A065628A4B3110092239B /* NoExerciseView.swift */,
 				E586C85F28A32BC800A58F38 /* ExerciseInWorkoutDetailView.swift */,
 			);
 			path = ListOfExercises;
@@ -362,6 +368,7 @@
 				2ABFF92C289B401600E43BC0 /* ExerciseListView.swift in Sources */,
 				54677B48289C375500A7FFBE /* SignupView.swift in Sources */,
 				54EE93E2289E12B7005AA463 /* HealthView.swift in Sources */,
+				8C2A065528A4B2820092239B /* addExerciseView.swift in Sources */,
 				5404D5E8289B33B10023B4AA /* FitnessBuddyApp.swift in Sources */,
 				54CC65B228A19EF000AA07CB /* AddWorkoutSplitView.swift in Sources */,
 				54677B53289C8D8F00A7FFBE /* SplashScreenView.swift in Sources */,
@@ -370,6 +377,7 @@
 				54EE93E0289E1292005AA463 /* ProfileView.swift in Sources */,
 				54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */,
 				2A46481D28A402CC007C0AF1 /* TitleText.swift in Sources */,
+				8C2A065728A4B3110092239B /* NoExerciseView.swift in Sources */,
 				2ABFF928289B3F9100E43BC0 /* ExerciseDBController.swift in Sources */,
 				54CC65B628A19F0700AA07CB /* WorkoutListViewModel.swift in Sources */,
 				54CC65B128A19EF000AA07CB /* NoEntryView.swift in Sources */,

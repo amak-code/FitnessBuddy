@@ -19,9 +19,10 @@ struct ExerciseInWorkout: Identifiable, Codable, Equatable {
     
     var id = UUID()
     var name: String
-    var sets: Int
-    var reps: Int
-    var maxWeight: Double
+    var sets: String
+    var reps: String
+    var maxWeight: String
+    var timestamp: String
     
 }
 
