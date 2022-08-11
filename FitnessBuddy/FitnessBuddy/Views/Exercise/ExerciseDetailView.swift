@@ -24,6 +24,8 @@ struct ExerciseDetailView: View {
                 AddExerciseView(exercise: exercise)
             }
         }
+        .frame(width: UIScreen.screenWidth - 25, height: UIScreen.screenHeight - 50, alignment: .center)
+        
     }
 }
 

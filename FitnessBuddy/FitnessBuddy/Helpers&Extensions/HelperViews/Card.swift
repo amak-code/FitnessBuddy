@@ -14,24 +14,21 @@ struct Card: View {
     
     var body: some View {
         
-        VStack {
-            Text(text)
-                .frame(width: width, height: 25, alignment: .topTrailing)
+        ZStack(alignment: .topLeading) {
+            Image(imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+            Text("  \(text)")
+                .frame(width: width, height: 25, alignment: .topLeading)
                 .font(Font.custom("BarlowCondensed-ExtraBoldItalic", size: 20))
                 .foregroundColor(.primary)
                 .background(Color("AccentDark"))
-                
+                .opacity(1)
                 
         }
-        .background(Image(imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: width*2, height: height*2))
-        .opacity(1)
-        
-        .foregroundColor(Color("AccentDark"))
+        .clipShape(RoundedRectangle(cornerRadius: 20))
         .frame(width: width, height: height)
-        .clipShape(RoundedRectangle(cornerRadius: 5))
+        //.padding(50)
     }
 }
 
