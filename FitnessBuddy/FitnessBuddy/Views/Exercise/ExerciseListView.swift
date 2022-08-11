@@ -12,21 +12,19 @@ struct ExerciseListView: View {
     var body: some View {
         
         VStack{
-            
             List {
-                    ForEach(exercises) { exercise in
-                        NavigationLink(destination: ExerciseDetailView(exercise: exercise)) {
-                            HStack {
-                                Image("dumbell_icon")
-                                    .resizable()
-                                    .frame(width: 20, height: 20, alignment: .leading)
-                                Text(exercise.name)
-                            }
+                ForEach(exercises) { exercise in
+                    NavigationLink(destination: ExerciseDetailView(exercise: exercise)) {
+                        HStack {
+                            Image("dumbell_icon")
+                                .resizable()
+                                .frame(width: 23, height: 23, alignment: .leading)
+                            Text("\(exercise.name)".capitalized)
                         }
                     }
+                }
             }
             .listStyle(.plain)
-            
         }
         .navigationTitle("Exercises")
     }
