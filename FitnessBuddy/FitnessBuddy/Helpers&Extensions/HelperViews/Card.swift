@@ -18,6 +18,7 @@ struct Card: View {
             Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
+                .frame(width: width, height: height)
             Text("  \(text)")
                 .frame(width: width, height: 25, alignment: .topLeading)
                 .font(Font.custom("BarlowCondensed-ExtraBoldItalic", size: 20))
@@ -28,7 +29,6 @@ struct Card: View {
         }
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .frame(width: width, height: height)
-        //.padding(50)
     }
 }
 

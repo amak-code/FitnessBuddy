@@ -41,15 +41,12 @@ struct ExerciseCategoryListView: View {
                             .font(.caption)
                             .foregroundColor(Color("AccentDark"))
                     }
+                    .padding(.top, 150)
                 }
             }
-            
-            
         }
         .navigationTitle("Explore Exercises")
-        
     }
-    
 }
 
 struct ExerciseCategoryListView_Previews: PreviewProvider {
