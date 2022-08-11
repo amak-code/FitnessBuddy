@@ -12,12 +12,13 @@ struct WorkoutListView: View {
     @State var showingPopup = false
 
     var body: some View {
-        NavigationView {
+        VStack {
             ZStack {
                 if showingPopup {
                     AddWorkoutSplitView(listViewModel: WorkoutListViewModel(), showingPopup: $showingPopup)
                 } else {
             ScrollView {
+                TitleText(text: "My Workouts")
                 VStack {
                     if listViewModel.WorkoutLists.isEmpty {
                         NoEntryView(showingPopup: $showingPopup)
@@ -47,6 +48,8 @@ struct WorkoutListView: View {
                     }
                 }
             }
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
         }
         .onAppear {
             listViewModel.getEntries()

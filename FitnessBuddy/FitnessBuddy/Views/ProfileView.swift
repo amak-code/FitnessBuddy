@@ -15,6 +15,7 @@ struct ProfileView: View {
     @ObservedObject var listViewModel: WorkoutListViewModel
     var body: some View {
         VStack {
+            TitleText(text: "Profile")
             Spacer()
             Text("Hi, \(name)!")
             Spacer()
@@ -41,8 +42,8 @@ struct ProfileView: View {
                 }
             }
             Spacer()
-            .navigationTitle("Profile")
-            .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("")
+                .navigationBarTitleDisplayMode(.inline)
         }.onAppear {
            // getUser()
             DispatchQueue.main.async {
