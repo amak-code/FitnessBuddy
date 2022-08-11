@@ -30,7 +30,6 @@
 		54677B51289C525600A7FFBE /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B50289C525600A7FFBE /* ForgotPasswordView.swift */; };
 		54677B53289C8D8F00A7FFBE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */; };
 		54CC65AF28A19EF000AA07CB /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65AB28A19EEF00AA07CB /* WorkoutListView.swift */; };
-		54CC65B028A19EF000AA07CB /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65AC28A19EEF00AA07CB /* WorkoutDetailView.swift */; };
 		54CC65B128A19EF000AA07CB /* NoEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65AD28A19EF000AA07CB /* NoEntryView.swift */; };
 		54CC65B228A19EF000AA07CB /* AddWorkoutSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65AE28A19EF000AA07CB /* AddWorkoutSplitView.swift */; };
 		54CC65B428A19EF900AA07CB /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CC65B328A19EF900AA07CB /* WorkoutList.swift */; };
@@ -77,7 +76,6 @@
 		54677B52289C8D8F00A7FFBE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		54677B54289C8E9C00A7FFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		54CC65AB28A19EEF00AA07CB /* WorkoutListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
-		54CC65AC28A19EEF00AA07CB /* WorkoutDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		54CC65AD28A19EF000AA07CB /* NoEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoEntryView.swift; sourceTree = "<group>"; };
 		54CC65AE28A19EF000AA07CB /* AddWorkoutSplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkoutSplitView.swift; sourceTree = "<group>"; };
 		54CC65B328A19EF900AA07CB /* WorkoutList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 			children = (
 				54CC65AE28A19EF000AA07CB /* AddWorkoutSplitView.swift */,
 				54CC65AD28A19EF000AA07CB /* NoEntryView.swift */,
-				54CC65AC28A19EEF00AA07CB /* WorkoutDetailView.swift */,
 				54CC65AB28A19EEF00AA07CB /* WorkoutListView.swift */,
 			);
 			path = WorkoutList;
@@ -357,7 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ABFF924289B3EDE00E43BC0 /* ExerciseCategoryListView.swift in Sources */,
-				54CC65B028A19EF000AA07CB /* WorkoutDetailView.swift in Sources */,
 				E50BF1DC28A1DA2E00403A74 /* GifImage.swift in Sources */,
 				2ABFF92E289B403500E43BC0 /* ExerciseDetailView.swift in Sources */,
 				54CC65B428A19EF900AA07CB /* WorkoutList.swift in Sources */,
