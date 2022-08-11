@@ -18,7 +18,7 @@ struct SplashScreenView: View {
     var body: some View {
         if isActive {
             if userSignedIn {
-                MenuView(signInModel: signInViewModel)
+                MenuView()
             }
             else {
                 SignupView(signInVM: signInViewModel, emailText: "", usernameText: "", passwordText: "")

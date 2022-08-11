@@ -32,7 +32,7 @@ struct SignupView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: MenuView(signInModel: signInVM), isActive: $signInVM.rightSignUp){
+                NavigationLink(destination: MenuView(), isActive: $signInVM.rightSignUp){
                     
                     Button {
                         guard !emailText.isEmpty, !passwordText.isEmpty, !usernameText.isEmpty else {

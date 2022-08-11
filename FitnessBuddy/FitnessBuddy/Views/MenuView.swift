@@ -10,10 +10,10 @@ import SwiftUI
 struct MenuView: View {
     
     @State private var selection = 1
-    @ObservedObject var signInVM: SignInViewModel
+    //@ObservedObject var signInVM: SignInViewModel
     
-    init(signInModel: SignInViewModel) {
-        self.signInVM = signInModel
+    init() {
+        //self.signInVM = signInModel
         UITabBar.appearance().backgroundColor = UIColor(named: "AccentDark")
         UITabBar.appearance().unselectedItemTintColor = UIColor(named: "UnselectedTabColor")
       }
@@ -40,7 +40,7 @@ struct MenuView: View {
                     Label("Player", systemImage: "play.fill")
                 }
                 .tag(4)
-            ProfileView(signInVM: signInVM, listViewModel: WorkoutListViewModel())
+            ProfileView(signInVM: SignInViewModel(), listViewModel: WorkoutListViewModel())
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")
                 }
