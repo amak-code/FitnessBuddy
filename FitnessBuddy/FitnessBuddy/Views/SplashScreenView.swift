@@ -12,7 +12,7 @@ struct SplashScreenView: View {
     @State var isActive : Bool = false
     @State private var size = 0.8
     @State private var opacity = 0.5
-    @State var userSignedIn: Bool = false
+    @State var userSignedIn: Bool = true
     @ObservedObject var signInViewModel = SignInViewModel()
     
     var body: some View {
@@ -46,7 +46,7 @@ struct SplashScreenView: View {
                         self.isActive = true
                         
                         //MARK: - if you comment out below line you will be able to test sign in and sign up view even if you signed in before
-                         self.userSignedIn = signInViewModel.isSignedIn
+                     //    self.userSignedIn = signInViewModel.isSignedIn
                     }
                 }
             }

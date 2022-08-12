@@ -35,7 +35,8 @@ struct MenuView: View {
                     Label("My Workouts", systemImage: "figure.walk.circle.fill")
                 }
                 .tag(3)
-            Text("There will be a music tab")
+          //  Text("There will be a music tab")
+            SpotifyView()
                 .tabItem {
                     Label("Player", systemImage: "play.fill")
                 }
