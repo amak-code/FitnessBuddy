@@ -13,7 +13,7 @@ class ExerciseDBController {
     
     static func fetchExercises( completion: @escaping (Result<[Exercise], NetworkError>) -> Void ) {
         let headers = [
-            "X-RapidAPI-Key": "98460464a2mshe4698707b991021p18ed31jsn331d5889e7cc",
+            "X-RapidAPI-Key": Keys.exerciseDB.rawValue,
             "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
             "Content-Type": "application/json"
         ]

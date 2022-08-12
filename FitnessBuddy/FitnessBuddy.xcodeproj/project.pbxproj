@@ -10,6 +10,7 @@
 		2A2CB07828A31A5300E73857 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2CB07728A31A5300E73857 /* AddExerciseView.swift */; };
 		2A46481D28A402CC007C0AF1 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A46481C28A402CC007C0AF1 /* TitleText.swift */; };
 		2A9889ED28A2F7EA005AC70B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9889EC28A2F7E9005AC70B /* Card.swift */; };
+		2AA4A34328A6F1FF0052828B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4A34228A6F1FF0052828B /* Keys.swift */; };
 		2ABFF924289B3EDE00E43BC0 /* ExerciseCategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFF923289B3EDE00E43BC0 /* ExerciseCategoryListView.swift */; };
 		2ABFF926289B3F6B00E43BC0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFF925289B3F6B00E43BC0 /* NetworkError.swift */; };
 		2ABFF928289B3F9100E43BC0 /* ExerciseDBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFF927289B3F9100E43BC0 /* ExerciseDBController.swift */; };
@@ -53,6 +54,7 @@
 		2A2CB07728A31A5300E73857 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
 		2A46481C28A402CC007C0AF1 /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
 		2A9889EC28A2F7E9005AC70B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		2AA4A34228A6F1FF0052828B /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		2ABFF923289B3EDE00E43BC0 /* ExerciseCategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCategoryListView.swift; sourceTree = "<group>"; };
 		2ABFF925289B3F6B00E43BC0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2ABFF927289B3F9100E43BC0 /* ExerciseDBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDBController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				E50BF1DB28A1DA2E00403A74 /* GifImage.swift */,
 				54CC65B328A19EF900AA07CB /* WorkoutList.swift */,
 				2ABFF929289B3FBA00E43BC0 /* Exercise.swift */,
+				2AA4A34228A6F1FF0052828B /* Keys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				E50BF1DC28A1DA2E00403A74 /* GifImage.swift in Sources */,
 				2ABFF92E289B403500E43BC0 /* ExerciseDetailView.swift in Sources */,
 				54CC65B428A19EF900AA07CB /* WorkoutList.swift in Sources */,
+				2AA4A34328A6F1FF0052828B /* Keys.swift in Sources */,
 				54CC65AF28A19EF000AA07CB /* WorkoutListView.swift in Sources */,
 				54677B4F289C50B000A7FFBE /* SigninView.swift in Sources */,
 				2ABFF926289B3F6B00E43BC0 /* NetworkError.swift in Sources */,

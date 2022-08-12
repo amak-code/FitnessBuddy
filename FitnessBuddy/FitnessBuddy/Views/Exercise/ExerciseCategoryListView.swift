@@ -63,7 +63,10 @@ class ExerciseCategoryViewModel: ObservableObject {
     @Published var categories: [String] = []
     
     init() {
-        getAllExercises()
+        DispatchQueue.main.async {
+            self.getAllExercises()
+        }
+        
     }
 
     func getAllExercises() {
