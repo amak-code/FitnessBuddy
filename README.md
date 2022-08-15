@@ -51,9 +51,10 @@ enum Keys: String {
 
 
 ## Connect with the Developers
-|Name|Linkedin|
-|----|-----| 
-|Aleksandra|<a href="https://www.linkedin.com/in/aleksandra-makhrova-a37061126/">Connect</a>|
-|Tatiana|<a href="https://www.linkedin.com/in/tatiana-bondarenko/">Connect</a>|
-|Niwei|<a href="https://www.linkedin.com/in/niwei-l-8702b068/">Connect</a>|
-|Lily|<a href="https://www.linkedin.com/in/lily-tran-076b8b132/">Connect</a>|
+|Name|Linkedin|Role|
+|----|-----|
+|Tiffany| Connect |Project Manager| 
+|Aleksandra|<a href="https://www.linkedin.com/in/aleksandra-makhrova-a37061126/">Connect</a>|Future Senior iOS Developer|
+|Tatiana|<a href="https://www.linkedin.com/in/tatiana-bondarenko/">Connect</a>|Future Senior iOS Developer|
+|Niwei|<a href="https://www.linkedin.com/in/niwei-l-8702b068/">Connect</a>|Future Senior iOS Developer|
+|Lily|<a href="https://www.linkedin.com/in/lily-tran-076b8b132/">Connect</a>|Future Senior iOS Developer|
