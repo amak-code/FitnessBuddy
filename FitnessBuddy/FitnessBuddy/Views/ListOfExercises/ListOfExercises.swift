@@ -34,6 +34,7 @@ struct ListOfExercises: View {
                                                     }
                             }.onDelete(perform: deleteexercise(indexSet:))
                         }
+
                     }
                 }
                     .toolbar {
