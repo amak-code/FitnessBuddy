@@ -1,30 +1,29 @@
 # FitnessBuddy
-![FitnessBuddy_icon](./FitnessBuddy/Resources/Assets.xcassets/Icons/dumbell_icon.imageset/dumbell_icon.png)
+![FitnessBuddy_icon](/FitnessBuddy/FitnessBuddy/Resources/Assets.xcassets/Icons/dumbell_icon.imageset/dumbell_icon.png)
 <p>A fitness app designed to help meet your fitness goals. This app sends reminders for your workout plans, persists data across your iOS personal devices, seamlessly integrates your Spotify music, and gives real-time updates on your heart rate. </p>
 
 ## Overview
 
-[Setup](#Setup)
-[Requirements](#Requirements)
-[Connect](#ConnectwiththeDevelopers)
+- [Setup](#Setup)
+- [Requirements](#Requirements)
+- [Connect](#ConnectwiththeDevelopers)
 
 ## Setup
 
 <p>There are a few things that are needed for this application to run:</p>
 1. Yelp Fusion API Key
-        * Link to the instructions on how to acquire a Bearer Token
-        * <a href="https://www.yelp.com/developers/documentation/v3/get_started">Get started with the Yelp Fusion API</a>
+    1. Link to the instructions on how to acquire a Bearer Token: <a href="https://www.yelp.com/developers/documentation/v3/get_started">Get started with the Yelp Fusion API</a>
 2. Spotify SDK
-    * <a href="https://developer.spotify.com/documentation/ios/quick-start/">iOS SDK Quick Start</a>
+    1. <a href="https://developer.spotify.com/documentation/ios/quick-start/">iOS SDK Quick Start</a>
     
-</br>
+<br>
 <p>To clone the repository: </p>  
  
 ```
 git clone https://github.com/amak-code/FitnessBuddy.git
 
 ```
-</br>
+<br>
 
 <p>Finally, the Yelp Fusion API Key and Spotify SDK must be placed into the file <i>FitnessBuddy/Models/Keys.swift</i> like so:</p>
 
