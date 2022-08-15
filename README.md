@@ -1,5 +1,5 @@
 # FitnessBuddy
-![FitnessBuddy_icon](./FitnessBuddy/FitnessBuddy/Resources/Assets.xcassets/Icons/dumbell_icon.imageset/dumbell_icon.png)
+![FitnessBuddy_icon](/FitnessBuddy/FitnessBuddy/Resources/Assets.xcassets/Icons/dumbell_icon.imageset/dumbell_icon.png)
 <p>A fitness app designed to help meet your fitness goals. This app sends reminders for your workout plans, persists data across your iOS personal devices, seamlessly integrates your Spotify music, and gives real-time updates on your heart rate. </p>
 
 ## Overview
