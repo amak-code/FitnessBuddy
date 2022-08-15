@@ -35,12 +35,14 @@ struct MenuView: View {
                     Label("My Workouts", systemImage: "figure.walk.circle.fill")
                 }
                 .tag(3)
-          //  Text("There will be a music tab")
-            SpotifyView()
+            
+            Text("There is a plca for Spotify view if you run it on Iphone")
+           // SpotifyView()
                 .tabItem {
                     Label("Player", systemImage: "play.fill")
                 }
                 .tag(4)
+
             ProfileView(signInVM: SignInViewModel(), listViewModel: WorkoutListViewModel())
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")
@@ -50,5 +52,12 @@ struct MenuView: View {
         .accentColor(Color("AccentLight"))
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
+    }
+}
+
+
+struct SpotifyNotSupportedView: View {
+    var body: some View {
+        Text("Spotify integration only works on iOS and not on Simulator")
     }
 }

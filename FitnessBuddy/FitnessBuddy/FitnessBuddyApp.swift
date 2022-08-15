@@ -19,7 +19,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct FitnessBuddyApp: App {
-    var spotifyController = SpotifyController()
+    
+   // var spotifyController = SpotifyController()
+
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
@@ -28,12 +30,14 @@ struct FitnessBuddyApp: App {
            NavigationView {
                 SplashScreenView(signInViewModel: SignInViewModel())
                
-            }// Handle url here
-           .onOpenURL { (url) in
-               spotifyController.setAccessToken(from: url)
-           }
-           .environmentObject(spotifyController)
-
+            }
+//#if os(iOS)
+//            // Handle url here
+//           .onOpenURL { (url) in
+//               spotifyController.setAccessToken(from: url)
+//           }
+//           .environmentObject(spotifyController)
+//#endif
         }
     }
 }
